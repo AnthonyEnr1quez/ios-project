@@ -10,6 +10,9 @@ import UIKit
 
 class ImageEncodingTableViewController: UITableViewController {
 
+    let cellTitles = ["About Image Encoding", "Try a problem!", "Image Encoding Test"]
+    let cellIDs = ["AIE", "TAP" , "IET"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +21,8 @@ class ImageEncodingTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        
     }
 
     // MARK: - Table view data source
@@ -34,12 +39,21 @@ class ImageEncodingTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "aboutCell", for: indexPath)
-        cell.textLabel!.text = "Review Image Encoding"
-
+        // hardcoded for now, will be better once classes and structs are created
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+        cell.textLabel!.text = cellTitles[indexPath.row]
         // Configure the cell...
+        
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // not the best way to implement but works for now
+        let vcName = cellIDs[indexPath.row]
+        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+        self.navigationController?.pushViewController(viewController!, animated: true)
     }
     
 

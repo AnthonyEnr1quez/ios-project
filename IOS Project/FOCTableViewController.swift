@@ -90,7 +90,6 @@ class FOCTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier == "image_encoding" {
-            print("inside prepare seg")
             let imageEncodingTVC:ImageEncodingTableViewController = segue.destination as! ImageEncodingTableViewController
             
         }
