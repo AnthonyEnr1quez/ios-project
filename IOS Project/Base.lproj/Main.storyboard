@@ -391,7 +391,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fhl-YW-YEo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Instruction Fetch" id="Ivn-HW-edY"/>
+                    <tabBarItem key="tabBarItem" title="Instruction Fetch" selectedImage="first" id="Ivn-HW-edY"/>
                     <navigationItem key="navigationItem" id="2bc-ov-fwr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2uv-ht-ceM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -485,7 +485,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RyM-fc-9id"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Instruction Execution" id="dj7-fs-nR7"/>
+                    <tabBarItem key="tabBarItem" title="Instruction Execution" selectedImage="first" id="dj7-fs-nR7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBY-l0-r5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -606,7 +606,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9aX-pp-wqv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Instruction Decode" id="dbF-Gf-At0"/>
+                    <tabBarItem key="tabBarItem" title="Instruction Decode" selectedImage="second" id="dbF-Gf-At0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3H-BA-xix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -705,7 +705,7 @@ It returns the result to the memory of the destination address.
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="QVy-Ak-AYm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Description" id="fvv-sm-Fmf"/>
+                    <tabBarItem key="tabBarItem" title="Description" selectedImage="second" id="fvv-sm-Fmf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxJ-wV-gJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -714,5 +714,6 @@ It returns the result to the memory of the destination address.
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
     </resources>
 </document>
