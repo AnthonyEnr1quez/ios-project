@@ -9,6 +9,8 @@
 import UIKit
 
 class FOCTableViewController: UITableViewController {
+    
+    var cellTitles = ["Image Encoding", "Fetch Execute Cycle", "Base Conversion", "Snap!"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +31,13 @@ class FOCTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return cellTitles.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "encodingCell", for: indexPath)
-        cell.textLabel!.text = "Image Encoding"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FOCcell", for: indexPath)
+        cell.textLabel!.text = cellTitles[indexPath.row]
 
         // Configure the cell...
 
@@ -44,6 +46,21 @@ class FOCTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //self.performSegue(withIdentifier: "image_encoding", sender: indexPath.row)
+        
+        let segueID:String
+        switch indexPath.row {
+        case 0: //
+            segueID = "image_encoding"
+        case 1: //For "two"
+            segueID = "fetch_execute"
+        case 2: //For "three"
+            segueID = "hex_dec"
+        default: //For "three"
+            segueID = "hex_dec"
+//        default:
+//            segueID = "snap_problems"
+        }
+        self.performSegue(withIdentifier: segueID, sender: self)
     }
     
 
@@ -89,10 +106,10 @@ class FOCTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "image_encoding" {
-            let imageEncodingTVC:ImageEncodingTableViewController = segue.destination as! ImageEncodingTableViewController
-            
-        }
+//        if segue.identifier == "image_encoding" {
+//            let imageEncodingTVC:ImageEncodingTableViewController = segue.destination as! ImageEncodingTableViewController
+//            
+//        }
     }
     
 
