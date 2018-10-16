@@ -657,7 +657,7 @@
                         <viewLayoutGuide key="safeArea" id="BWx-vc-KC1"/>
                         <variation key="heightClass=regular-widthClass=regular" hidden="NO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fetch Execute Cycle" id="7iG-cA-h3U"/>
+                    <tabBarItem key="tabBarItem" title="Fetch Execute Cycle" image="second" id="7iG-cA-h3U"/>
                     <connections>
                         <outlet property="ContentMemTXT" destination="G6m-Na-cfj" id="i7q-Zz-IAZ"/>
                         <outlet property="DFetchTXT" destination="N4Q-YY-pN5" id="BLc-ma-qCG"/>
@@ -722,8 +722,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Hb-jE-a0G">
+                                <rect key="frame" x="53" y="113" width="829" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Fetch execute cycle is a basic instruction cycle of a computer in which it retrieves the instruction from the memory and carries out the actions required to be done.
+
+</string>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Nhv-ks-CO2">
-                                <rect key="frame" x="53" y="302" width="829" height="926"/>
+                                <rect key="frame" x="53" y="321" width="829" height="926"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">It can be explained in five-step cycle:
@@ -747,15 +757,6 @@ It returns the result to the memory of the destination address.
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="9BT-6e-nBE">
-                                <rect key="frame" x="53" y="116" width="829" height="178"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Fetch execute cycle is a basic instruction cycle of a computer in which it retrieves the instruction from the memory and carries out the actions required to be done.
-
-</string>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -763,7 +764,6 @@ It returns the result to the memory of the destination address.
                             <constraint firstItem="NAW-Mf-Lb0" firstAttribute="top" secondItem="Sht-aD-pNB" secondAttribute="top" constant="-216" id="4pi-sR-Utz"/>
                             <constraint firstAttribute="trailing" secondItem="NAW-Mf-Lb0" secondAttribute="trailing" constant="606" id="6Pn-tZ-NTG"/>
                             <constraint firstItem="Fmh-sy-Wgs" firstAttribute="leading" secondItem="Sht-aD-pNB" secondAttribute="leadingMargin" constant="51" id="9e6-Km-7ib"/>
-                            <constraint firstItem="9BT-6e-nBE" firstAttribute="top" secondItem="Fmh-sy-Wgs" secondAttribute="bottom" constant="19" id="grW-JS-LRh"/>
                             <constraint firstItem="NAW-Mf-Lb0" firstAttribute="leading" secondItem="Sht-aD-pNB" secondAttribute="leadingMargin" constant="-98" id="u09-WA-Psq"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fmh-sy-Wgs" secondAttribute="trailing" constant="20" symbolic="YES" id="uJ0-HJ-MIl"/>
                             <constraint firstItem="Fmh-sy-Wgs" firstAttribute="top" secondItem="Sht-aD-pNB" secondAttribute="top" constant="36" id="z7F-Ga-Wsd"/>
@@ -817,5 +817,6 @@ It returns the result to the memory of the destination address.
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
     </resources>
 </document>

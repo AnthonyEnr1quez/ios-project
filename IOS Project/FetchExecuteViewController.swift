@@ -81,21 +81,51 @@ class FetchExecuteViewController: UIViewController{
         InsAddressTXT.text = "\(800)"
         addMemTXT.text = "\(800)"
         ContentMemTXT.text = "ADD 4000, 2000, 2080"
-         sleep(1)
-        fetch()
-        sleep(1)
-        decode()
-        sleep(1)
-        dataFetch()
-        sleep(1)
-        
-        iExecution()
-        sleep(1)
-        rresult()
-        
-        
-        
+        UIView.animate(withDuration: 1.0, delay: 3.5, options: [], animations: {self.fetch()}, completion: nil)
+   UIView.animate(withDuration: 1.0, delay: 10, options: [], animations: {self.decode()}, completion: nil)
+     UIView.animate(withDuration: 1.0, delay: 15.5, options: [], animations: {self.dataFetch()}, completion: nil)
+        UIView.animate(withDuration: 1.0, delay: 17.5, options: [], animations: {self.iExecution()}, completion: nil)
+ UIView.animate(withDuration: 1.0, delay: 20.5, options: [], animations: {self.rresult()}, completion: nil)
+//        fetch()
+//
+//        decode()
+//        dataFetch()
+//        iExecution()
+//        rresult()
+        //self.run();
     }
+    
+//    func run(){
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 20)
+//        {
+//            self.fetch()
+//        }
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 20)
+//        {
+//            self.decode()
+//        }
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 20)
+//        {
+//            self.dataFetch()
+//        }
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 20)
+//        {
+//            self.iExecution()
+//        }
+//
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 20)
+//        {
+//            self.rresult()
+//        }
+//
+//    }
+    
+   
+    
     func fetch(){
        
         FetchTXT.backgroundColor = UIColor.orange
