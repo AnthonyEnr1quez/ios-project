@@ -787,21 +787,21 @@ turn right 90 repeat 4 times</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Input" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spg-As-Vm9">
-                                <rect key="frame" x="58" y="125" width="39" height="21"/>
+                                <rect key="frame" x="63" y="205" width="39" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pA-1D-6a6">
-                                <rect key="frame" x="58" y="56" width="42" height="21"/>
+                                <rect key="frame" x="63" y="136" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YUj-Hm-sh4">
-                                <rect key="frame" x="0.0" y="108" width="414" height="54"/>
+                                <rect key="frame" x="128" y="188" width="242" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="PVT-Gt-dvJ" id="InN-iw-BKd"/>
@@ -809,54 +809,57 @@ turn right 90 repeat 4 times</string>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdH-F2-Zog">
-                                <rect key="frame" x="145" y="182" width="85" height="30"/>
+                                <rect key="frame" x="150" y="261" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convert:" destination="PVT-Gt-dvJ" eventType="touchUpInside" id="vKq-JC-AyI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yV-bn-btN">
-                                <rect key="frame" x="56" y="231" width="30" height="21"/>
+                                <rect key="frame" x="61" y="311" width="30" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0B-3H-Zm3">
-                                <rect key="frame" x="76" y="260" width="29" height="21"/>
+                                <rect key="frame" x="81" y="340" width="249" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Decimal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqI-cE-ds4">
-                                <rect key="frame" x="56" y="308" width="62" height="21"/>
+                                <rect key="frame" x="61" y="388" width="62" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="16777215" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN6-Hy-cdm">
-                                <rect key="frame" x="76" y="337" width="75" height="21"/>
+                                <rect key="frame" x="81" y="417" width="224" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Binary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSs-eW-NBF">
-                                <rect key="frame" x="56" y="379" width="49" height="21"/>
+                                <rect key="frame" x="61" y="459" width="49" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="111111111111111111111111" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuz-I9-zdF">
-                                <rect key="frame" x="76" y="408" width="181" height="21"/>
+                                <rect key="frame" x="81" y="488" width="224" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VII-a5-dET">
-                                <rect key="frame" x="149" y="56" width="151" height="30"/>
+                                <rect key="frame" x="154" y="136" width="151" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -869,11 +872,14 @@ turn right 90 repeat 4 times</string>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="1cC-TV-omO"/>
                     <connections>
                         <outlet property="Picker" destination="YUj-Hm-sh4" id="TI6-CH-p5v"/>
+                        <outlet property="decimalValueLabel" destination="RN6-Hy-cdm" id="pk3-TK-BMe"/>
+                        <outlet property="hexValueLabel" destination="Q0B-3H-Zm3" id="iZn-wp-kEC"/>
+                        <outlet property="valueTextField" destination="VII-a5-dET" id="YUD-MY-N5n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rc6-1M-og9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="-1134"/>
+            <point key="canvasLocation" x="428.98550724637687" y="-1134.375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xf3-2m-wF2">
@@ -1507,14 +1513,14 @@ It returns the result to the memory of the destination address.
         </scene>
     </scenes>
     <resources>
-        <image name="BytesTable" width="1598" height="274"/>
+        <image name="BytesTable" width="799" height="137"/>
         <image name="RGB Pixel" width="105" height="94"/>
-        <image name="RGBFlashlights" width="1218" height="647"/>
-        <image name="RunLengthEncoding" width="982" height="524"/>
-        <image name="colortable" width="435" height="766"/>
+        <image name="RGBFlashlights" width="584.6400146484375" height="310.55999755859375"/>
+        <image name="RunLengthEncoding" width="491" height="262"/>
+        <image name="colortable" width="208.80000305175781" height="367.67999267578125"/>
         <image name="first" width="30" height="30"/>
-        <image name="italyflag" width="400" height="306"/>
-        <image name="justtable" width="432" height="411"/>
+        <image name="italyflag" width="192" height="146.8800048828125"/>
+        <image name="justtable" width="207.36000061035156" height="197.27999877929688"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
