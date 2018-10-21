@@ -615,6 +615,151 @@
             </objects>
             <point key="canvasLocation" x="2357" y="-273"/>
         </scene>
+        <!--Hint-->
+        <scene sceneID="3D1-Ie-g6Q">
+            <objects>
+                <viewController id="OYS-XI-HdY" customClass="hintViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Mr-CU-oKj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCT-tI-Gid">
+                                <rect key="frame" x="92" y="234" width="275" height="307"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ixN-Eq-0eH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hint" id="KPm-y5-Cgw"/>
+                    <connections>
+                        <outlet property="HintImageView" destination="tCT-tI-Gid" id="Nbn-dZ-B2e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7UT-88-z7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1813.0434782608697" y="1259.5982142857142"/>
+        </scene>
+        <!--Problem-->
+        <scene sceneID="fcN-14-e7v">
+            <objects>
+                <viewController id="0KC-gQ-a9S" customClass="problemViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Ug-uu-v1K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Algorithm: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gw-48-I8h">
+                                <rect key="frame" x="42" y="162" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXZ-c0-ihF">
+                                <rect key="frame" x="49" y="289" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Steps:  move forward 100 
+turn right 90 repeat 4 times</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0UP-7Q-y4p">
+                                <rect key="frame" x="73" y="219" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0h-zq-5cw">
+                                <rect key="frame" x="0.0" y="423" width="414" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="any-R6-d46">
+                                <rect key="frame" x="0.0" y="576" width="414" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lv7-gx-ptY">
+                                <rect key="frame" x="0.0" y="497" width="414" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XNX-ks-wqx">
+                                <rect key="frame" x="0.0" y="355" width="414" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="f67-To-UND"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Problem" id="HZX-Fl-bWm"/>
+                    <connections>
+                        <outlet property="algorithmLBL" destination="0UP-7Q-y4p" id="t0B-gM-1OB"/>
+                        <outlet property="square1" destination="XNX-ks-wqx" id="DFq-hn-M0u"/>
+                        <outlet property="square2" destination="m0h-zq-5cw" id="AJJ-oM-NOc"/>
+                        <outlet property="square3" destination="Lv7-gx-ptY" id="4sI-1E-Jfi"/>
+                        <outlet property="square4" destination="any-R6-d46" id="ktv-F8-dDw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhP-3x-oxB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1186.9565217391305" y="1309.8214285714284"/>
+        </scene>
+        <!--Solution-->
+        <scene sceneID="kWv-af-wTX">
+            <objects>
+                <viewController id="VJH-0B-IBC" customClass="solutionViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dEC-I8-WEx" customClass="pro">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T0g-NE-WAl">
+                                <rect key="frame" x="42" y="186" width="335" height="282"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BDS-uH-cdo"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Solution" id="OHZ-TO-z45"/>
+                    <connections>
+                        <outlet property="SollutionImageView" destination="T0g-NE-WAl" id="hkX-E9-50o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5L-T7-3ub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2507.2463768115945" y="1200.6696428571429"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yk9-2h-TJ3">
+            <objects>
+                <tabBarController id="DAn-is-NeD" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jkp-d0-aJ9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0KC-gQ-a9S" kind="relationship" relationship="viewControllers" id="3hU-ew-M8e"/>
+                        <segue destination="OYS-XI-HdY" kind="relationship" relationship="viewControllers" id="SbX-cz-IpO"/>
+                        <segue destination="VJH-0B-IBC" kind="relationship" relationship="viewControllers" id="ere-uj-YXx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M5L-MH-ndt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1481" y="452"/>
+        </scene>
         <!--FOCNC-->
         <scene sceneID="3We-fp-PPi">
             <objects>
@@ -1254,6 +1399,9 @@ It returns the result to the memory of the destination address.
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="DAn-is-NeD" kind="show" id="wR4-OF-z2M"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1265,7 +1413,7 @@ It returns the result to the memory of the destination address.
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYR-dP-S2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-464" y="636"/>
+            <point key="canvasLocation" x="-220" y="532"/>
         </scene>
         <!--Gif Encoding Info VC-->
         <scene sceneID="AQ4-Id-vfU">
@@ -1359,14 +1507,14 @@ It returns the result to the memory of the destination address.
         </scene>
     </scenes>
     <resources>
-        <image name="BytesTable" width="799" height="137"/>
+        <image name="BytesTable" width="1598" height="274"/>
         <image name="RGB Pixel" width="105" height="94"/>
-        <image name="RGBFlashlights" width="584.6400146484375" height="310.55999755859375"/>
-        <image name="RunLengthEncoding" width="491" height="262"/>
-        <image name="colortable" width="208.80000305175781" height="367.67999267578125"/>
+        <image name="RGBFlashlights" width="1218" height="647"/>
+        <image name="RunLengthEncoding" width="982" height="524"/>
+        <image name="colortable" width="435" height="766"/>
         <image name="first" width="30" height="30"/>
-        <image name="italyflag" width="192" height="146.8800048828125"/>
-        <image name="justtable" width="207.36000061035156" height="197.27999877929688"/>
+        <image name="italyflag" width="400" height="306"/>
+        <image name="justtable" width="432" height="411"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

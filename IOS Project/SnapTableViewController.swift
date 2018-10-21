@@ -10,7 +10,7 @@ import UIKit
 
 class SnapTableViewController: UITableViewController {
     
-    var a = ["How big is the stage?","Algorithm :Draw a square","It's raininng squares","Green and Red Squares","Animated Tree" , "Path Finder" , "Space Invaders" , "Meneut" , "Interactive tree" , "Roman numericals"]
+    var a = ["Algorithm :Draw a square", "How big is the stage?", "It's raininng squares", "Green and Red Squares", "Animated Tree" , "Path Finder" , "Space Invaders" , "Meneut" , "Interactive tree" , "Roman numericals"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
