@@ -10,7 +10,7 @@ import UIKit
 
 class SnapTableViewController: UITableViewController {
     
-    var a = ["Algorithm :Draw a square", "How big is the stage?", "It's raininng squares", "Green and Red Squares", "Animated Tree" , "Path Finder" , "Space Invaders" , "Meneut" , "Interactive tree" , "Roman numericals"]
+    var a = ["Algorithm :Draw a square","It's raininng squares", "Green and Red Squares", "Bouncing Forever", " Worst Guessing Game Ever" , "Einstein Walks Into a Bar ..." , "Polygons-Gateway to Pinwheels"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,9 @@ class SnapTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        SnapModel.snap.selectedRow = indexPath.row
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return a.count
@@ -46,7 +48,7 @@ class SnapTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
-
+    
  
 
     /*

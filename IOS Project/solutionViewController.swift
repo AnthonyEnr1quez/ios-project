@@ -15,7 +15,7 @@ class solutionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        SollutionImageView.image   = UIImage(named:  "solution.PNG")
+        SollutionImageView.image   = UIImage(named:  "\(SnapModel.snap.solutionImages[SnapModel.snap.selectedRow]).png")
 //
     }
     

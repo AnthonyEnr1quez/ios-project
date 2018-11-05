@@ -10,6 +10,7 @@
 		19FF8AB9217C1D01008D501C /* problemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF8AB8217C1D01008D501C /* problemViewController.swift */; };
 		19FF8ABB217C1D22008D501C /* hintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF8ABA217C1D22008D501C /* hintViewController.swift */; };
 		19FF8ABD217C1D36008D501C /* solutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF8ABC217C1D36008D501C /* solutionViewController.swift */; };
+		3F37B4032186C09800D72DB9 /* SnapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37B4022186C09800D72DB9 /* SnapModel.swift */; };
 		3F613BA02175456D00AA752A /* FetchExecuteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F613B9F2175456D00AA752A /* FetchExecuteViewController.swift */; };
 		BA00DDB3216ACB170099AE32 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00DDB2216ACB170099AE32 /* FirstViewController.swift */; };
 		BA00DDB5216AE0F70099AE32 /* SnapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */; };
@@ -28,6 +29,7 @@
 		19FF8AB8217C1D01008D501C /* problemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = problemViewController.swift; sourceTree = "<group>"; };
 		19FF8ABA217C1D22008D501C /* hintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hintViewController.swift; sourceTree = "<group>"; };
 		19FF8ABC217C1D36008D501C /* solutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = solutionViewController.swift; sourceTree = "<group>"; };
+		3F37B4022186C09800D72DB9 /* SnapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapModel.swift; sourceTree = "<group>"; };
 		3F613B9F2175456D00AA752A /* FetchExecuteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchExecuteViewController.swift; sourceTree = "<group>"; };
 		BA00DDB2216ACB170099AE32 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapTableViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				E280CE082164106E005392A1 /* AppDelegate.swift */,
 				E280CE0E2164106E005392A1 /* Main.storyboard */,
+				3F37B4022186C09800D72DB9 /* SnapModel.swift */,
 				19FF8AB8217C1D01008D501C /* problemViewController.swift */,
 				19FF8ABA217C1D22008D501C /* hintViewController.swift */,
 				19FF8ABC217C1D36008D501C /* solutionViewController.swift */,
@@ -169,6 +172,7 @@
 				19FF8AB9217C1D01008D501C /* problemViewController.swift in Sources */,
 				BA6D55702166ACA0006BC7BF /* ImageEncodingTableViewController.swift in Sources */,
 				BA6D556E2166AB2F006BC7BF /* FOCTableViewController.swift in Sources */,
+				3F37B4032186C09800D72DB9 /* SnapModel.swift in Sources */,
 				3F613BA02175456D00AA752A /* FetchExecuteViewController.swift in Sources */,
 				BAE103682178EE4B007428E4 /* CompressionViewController.swift in Sources */,
 				E280CE092164106E005392A1 /* AppDelegate.swift in Sources */,
@@ -323,7 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9D7F3MX3L3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "IOS Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,7 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9D7F3MX3L3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "IOS Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

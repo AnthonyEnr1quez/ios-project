@@ -9,10 +9,10 @@
 import UIKit
 
 class hintViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-   HintImageView.image   = UIImage(named:  "hint.PNG")
+   HintImageView.image   = UIImage(named:  "\(SnapModel.snap.hintImages[SnapModel.snap.selectedRow]).png")
         // Do any additional setup after loading the view.
     }
     
