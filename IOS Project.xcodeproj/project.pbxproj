@@ -23,6 +23,7 @@
 		E280CE102164106E005392A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E280CE0E2164106E005392A1 /* Main.storyboard */; };
 		E280CE1221641071005392A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E280CE1121641071005392A1 /* Assets.xcassets */; };
 		E280CE1521641071005392A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E280CE1321641071005392A1 /* LaunchScreen.storyboard */; };
+		E2B194802191128400583976 /* BaseConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1947F2191128400583976 /* BaseConversion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E280CE1121641071005392A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E280CE1421641071005392A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E280CE1621641071005392A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2B1947F2191128400583976 /* BaseConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConversion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				E280CE1121641071005392A1 /* Assets.xcassets */,
 				E280CE1321641071005392A1 /* LaunchScreen.storyboard */,
 				E280CE1621641071005392A1 /* Info.plist */,
+				E2B1947F2191128400583976 /* BaseConversion.swift */,
 			);
 			path = "IOS Project";
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				BA6D556E2166AB2F006BC7BF /* FOCTableViewController.swift in Sources */,
 				3F37B4032186C09800D72DB9 /* SnapModel.swift in Sources */,
 				3F613BA02175456D00AA752A /* FetchExecuteViewController.swift in Sources */,
+				E2B194802191128400583976 /* BaseConversion.swift in Sources */,
 				BAE103682178EE4B007428E4 /* CompressionViewController.swift in Sources */,
 				E280CE092164106E005392A1 /* AppDelegate.swift in Sources */,
 				BA00DDB3216ACB170099AE32 /* FirstViewController.swift in Sources */,
@@ -327,7 +331,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9D7F3MX3L3;
 				INFOPLIST_FILE = "IOS Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -345,7 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9D7F3MX3L3;
 				INFOPLIST_FILE = "IOS Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
