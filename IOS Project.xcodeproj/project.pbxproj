@@ -59,6 +59,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA5BCB5D219B3D770093C6FF /* Image Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				BA6D556F2166ACA0006BC7BF /* ImageEncodingTableViewController.swift */,
+				BAE103672178EE4B007428E4 /* CompressionViewController.swift */,
+				BAE103692178EE71007428E4 /* GIFInfoViewController.swift */,
+				BAE103652178EE32007428E4 /* RGBViewController.swift */,
+			);
+			path = "Image Encoding";
+			sourceTree = "<group>";
+		};
 		E280CDFC2164106E005392A1 = {
 			isa = PBXGroup;
 			children = (
@@ -78,19 +89,16 @@
 		E280CE072164106E005392A1 /* IOS Project */ = {
 			isa = PBXGroup;
 			children = (
+				BA5BCB5D219B3D770093C6FF /* Image Encoding */,
 				E280CE082164106E005392A1 /* AppDelegate.swift */,
 				E280CE0E2164106E005392A1 /* Main.storyboard */,
-				3F37B4022186C09800D72DB9 /* SnapModel.swift */,
-				19FF8AB8217C1D01008D501C /* problemViewController.swift */,
-				19FF8ABA217C1D22008D501C /* hintViewController.swift */,
-				19FF8ABC217C1D36008D501C /* solutionViewController.swift */,
-				BAE103652178EE32007428E4 /* RGBViewController.swift */,
-				BAE103672178EE4B007428E4 /* CompressionViewController.swift */,
-				BAE103692178EE71007428E4 /* GIFInfoViewController.swift */,
-				BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */,
 				3F613B9F2175456D00AA752A /* FetchExecuteViewController.swift */,
+				3F37B4022186C09800D72DB9 /* SnapModel.swift */,
+				19FF8ABA217C1D22008D501C /* hintViewController.swift */,
+				19FF8AB8217C1D01008D501C /* problemViewController.swift */,
+				19FF8ABC217C1D36008D501C /* solutionViewController.swift */,
+				BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */,
 				BA00DDB2216ACB170099AE32 /* FirstViewController.swift */,
-				BA6D556F2166ACA0006BC7BF /* ImageEncodingTableViewController.swift */,
 				BA6D556D2166AB2F006BC7BF /* FOCTableViewController.swift */,
 				E280CE1121641071005392A1 /* Assets.xcassets */,
 				E280CE1321641071005392A1 /* LaunchScreen.storyboard */,
