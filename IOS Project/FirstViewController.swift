@@ -15,8 +15,9 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet var valueTextField: UITextField!
     @IBOutlet var hexValueLabel: UILabel!
     @IBOutlet var decimalValueLabel: UILabel!
+    @IBOutlet var binaryValueLabel: UILabel!
     
-    var inputFormat: String = ""
+    var inputFormat: String = "HEX"
     var pickerData:[String] = [String]()
     
     override func viewDidLoad() {
@@ -48,11 +49,13 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBAction func convert(_ sender: Any) {
         
+        
         if let input = valueTextField.text {
-            if let value = UInt64("FFF", radix:16) {
-
-                hexValueLabel.text = "\(input)"
-                decimalValueLabel.text = "\(value)"
+            if let baseConversion:BaseConversion = BaseConversion(input: input, type: inputFormat) {
+                
+                hexValueLabel.text = "\(baseConversion.getHexadecimal())"
+                decimalValueLabel.text = "\(baseConversion.getDecimal())"
+                binaryValueLabel.text = "\(baseConversion.getBinary())"
             }
         }
     }
