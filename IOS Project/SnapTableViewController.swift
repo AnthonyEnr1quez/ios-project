@@ -10,7 +10,7 @@ import UIKit
 
 class SnapTableViewController: UITableViewController {
     
-    var a = ["Algorithm :Draw a square","It's raininng squares", "Green and Red Squares", "Bouncing Forever", " Worst Guessing Game Ever" , "Einstein Walks Into a Bar ..." , "Polygons-Gateway to Pinwheels"]
+    var a = ["Algorithm :Draw a square","It's raining squares", "Green and Red Squares", "Bouncing Forever", "Worst Guessing Game Ever" , "Einstein Walks Into a Bar ..." , "Polygons-Gateway to Pinwheels"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

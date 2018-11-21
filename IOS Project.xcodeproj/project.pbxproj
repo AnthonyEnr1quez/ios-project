@@ -24,6 +24,8 @@
 		E280CE1221641071005392A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E280CE1121641071005392A1 /* Assets.xcassets */; };
 		E280CE1521641071005392A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E280CE1321641071005392A1 /* LaunchScreen.storyboard */; };
 		E2B194802191128400583976 /* BaseConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1947F2191128400583976 /* BaseConversion.swift */; };
+		ED21EA1A21A4CA5C00154C33 /* CreateThisFlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */; };
+		EDD0A48421A4D0BB0001FC38 /* FlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0A48321A4D0BB0001FC38 /* FlagView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		E280CE1421641071005392A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E280CE1621641071005392A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B1947F2191128400583976 /* BaseConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConversion.swift; sourceTree = "<group>"; };
+		ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThisFlagViewController.swift; sourceTree = "<group>"; };
+		EDD0A48321A4D0BB0001FC38 /* FlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				BAE103672178EE4B007428E4 /* CompressionViewController.swift */,
 				BAE103692178EE71007428E4 /* GIFInfoViewController.swift */,
 				BAE103652178EE32007428E4 /* RGBViewController.swift */,
+				ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */,
+				EDD0A48321A4D0BB0001FC38 /* FlagView.swift */,
 			);
 			path = "Image Encoding";
 			sourceTree = "<group>";
@@ -183,6 +189,7 @@
 				19FF8AB9217C1D01008D501C /* problemViewController.swift in Sources */,
 				BA6D55702166ACA0006BC7BF /* ImageEncodingTableViewController.swift in Sources */,
 				BA6D556E2166AB2F006BC7BF /* FOCTableViewController.swift in Sources */,
+				ED21EA1A21A4CA5C00154C33 /* CreateThisFlagViewController.swift in Sources */,
 				3F37B4032186C09800D72DB9 /* SnapModel.swift in Sources */,
 				3F613BA02175456D00AA752A /* FetchExecuteViewController.swift in Sources */,
 				E2B194802191128400583976 /* BaseConversion.swift in Sources */,
@@ -192,6 +199,7 @@
 				BAE103662178EE32007428E4 /* RGBViewController.swift in Sources */,
 				BA00DDB5216AE0F70099AE32 /* SnapTableViewController.swift in Sources */,
 				BAE1036A2178EE71007428E4 /* GIFInfoViewController.swift in Sources */,
+				EDD0A48421A4D0BB0001FC38 /* FlagView.swift in Sources */,
 				19FF8ABD217C1D36008D501C /* solutionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,13 +347,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9D7F3MX3L3;
+				DEVELOPMENT_TEAM = 2VSW3UGD9D;
 				INFOPLIST_FILE = "IOS Project/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "bootstrapguru.IOS-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = "foc.IOS-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -357,13 +366,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9D7F3MX3L3;
+				DEVELOPMENT_TEAM = 2VSW3UGD9D;
 				INFOPLIST_FILE = "IOS Project/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "bootstrapguru.IOS-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = "foc.IOS-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
