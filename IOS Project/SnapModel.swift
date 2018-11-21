@@ -14,13 +14,22 @@ struct SnapModel {
 //
     var hintImages:[String]
     var solutionImages:[String]
-    //let problems:[Problem] = {
+    var problems:[Problem] = []
     var selectedRow:Int
     
     init() {
+        let exProblemSteps = "Ask the user for n \nDraw a square \nMove to a random location \nRepeat steps 2-3 n times"
+        let exampleProblem = Problem(name: "It's Raining Squares!", algorithm: "Draw n 20x20 squares (where n is supplied by the user) in random locations about the screen (like raindrops, but square)", steps: exProblemSteps)
+        
+        problems.append(exampleProblem)
         hintImages = ["square hint", "raining hint", "RG hint", "bounce hint", "guess hint", "einstein hint", "pinwheels hint"]
         solutionImages = ["square solution", "raining solution", "RG solution", "bounce solution", "guess solution", "einstein solution", "pinwheels solution"]
         selectedRow = 0
+    }
+    
+    // TODO: change to better implementation
+    func getProblem(_ index:Int) -> Problem {
+        return problems[index]
     }
 }
     

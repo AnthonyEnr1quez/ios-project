@@ -11,11 +11,16 @@ import UIKit
 class problemViewController: UIViewController {
     
     
-    @IBOutlet weak var algorithmLBL: UILabel!
-    @IBOutlet weak var stepsLBL: UILabel!
+    @IBOutlet weak var algorithmTV: UITextView!
+    @IBOutlet weak var stepsTV: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let exProblem = SnapModel.snap.getProblem(0)
+        
+        algorithmTV.text = exProblem.algorithm
+        stepsTV.text = exProblem.steps
         
         // Do any additional setup after loading the view.
     }
