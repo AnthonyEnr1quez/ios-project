@@ -10,44 +10,41 @@ import UIKit
 
 class CreateThisFlagViewController: UIViewController {
     
-    @IBOutlet weak var flag: FlagStackView!
+    @IBOutlet weak var flag: UICollectionView!
     
-    var touchedViews:[UIView]!
-     
+    var touchedCells:[UICollectionViewCell]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
-
  
-    // if pixel is panned across, change its color
+    // if cell is panned across, change its color
     @IBAction func panGR(_ sender: UIPanGestureRecognizer) {
         
         if sender.state == UIGestureRecognizer.State.began {
-            touchedViews = []
+            touchedCells = []
         }
         
         let panLocation = sender.location(in: self.view)
         print(panLocation)
         
-        for row in flag.subviews as! [UIStackView] {
-            for view in row.subviews as [UIView] {
-                let convert = row.convert(view.frame, to: self.view)
-                if convert.contains(panLocation) && !touchedViews.contains(view) {
-                    touchedViews.append(view)
-                    print("touched")
-                }
+        for cell in flag.visibleCells as [UICollectionViewCell] {
+            let convertedLocation = self.view.convert(cell.frame, from:flag)
+            if !touchedCells.contains(cell) && convertedLocation.contains(panLocation) {
+                touchedCells.append(cell)
+                print("Touched")
             }
         }
         
-        if sender.state == UIGestureRecognizer.State.ended && touchedViews.isEmpty == false {
-            for view in touchedViews {
-                print(view)
-                if view.backgroundColor == .red {
-                    view.backgroundColor = .blue
+        if sender.state == UIGestureRecognizer.State.ended && touchedCells.isEmpty == false {
+            for cell in touchedCells {
+                print(cell)
+                if cell.backgroundColor == .black {
+                    cell.backgroundColor = .red
                 } else {
-                    view.backgroundColor = .red
+                    cell.backgroundColor = .black
                 }
             }
         }
@@ -66,3 +63,25 @@ class CreateThisFlagViewController: UIViewController {
 
 }
 
+// use delegates and datasource to set up flag layout for collection view
+extension CreateThisFlagViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        cell.backgroundColor = .black
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 25, height: 25)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+    }
+    
+}

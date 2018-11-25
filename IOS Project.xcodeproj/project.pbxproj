@@ -25,7 +25,6 @@
 		E280CE1521641071005392A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E280CE1321641071005392A1 /* LaunchScreen.storyboard */; };
 		E2B194802191128400583976 /* BaseConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1947F2191128400583976 /* BaseConversion.swift */; };
 		ED21EA1A21A4CA5C00154C33 /* CreateThisFlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */; };
-		ED856B8221A645DF00620ECE /* FlagStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED856B8121A645DF00620ECE /* FlagStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +48,6 @@
 		E280CE1621641071005392A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B1947F2191128400583976 /* BaseConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConversion.swift; sourceTree = "<group>"; };
 		ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThisFlagViewController.swift; sourceTree = "<group>"; };
-		ED856B8121A645DF00620ECE /* FlagStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,6 @@
 				BAE103692178EE71007428E4 /* GIFInfoViewController.swift */,
 				BAE103652178EE32007428E4 /* RGBViewController.swift */,
 				ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */,
-				ED856B8121A645DF00620ECE /* FlagStackView.swift */,
 			);
 			path = "Image Encoding";
 			sourceTree = "<group>";
@@ -190,7 +187,6 @@
 				BA6D55702166ACA0006BC7BF /* ImageEncodingTableViewController.swift in Sources */,
 				BA6D556E2166AB2F006BC7BF /* FOCTableViewController.swift in Sources */,
 				ED21EA1A21A4CA5C00154C33 /* CreateThisFlagViewController.swift in Sources */,
-				ED856B8221A645DF00620ECE /* FlagStackView.swift in Sources */,
 				3F37B4032186C09800D72DB9 /* SnapModel.swift in Sources */,
 				3F613BA02175456D00AA752A /* FetchExecuteViewController.swift in Sources */,
 				E2B194802191128400583976 /* BaseConversion.swift in Sources */,
@@ -349,7 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VSW3UGD9D;
 				INFOPLIST_FILE = "IOS Project/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,7 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VSW3UGD9D;
 				INFOPLIST_FILE = "IOS Project/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
