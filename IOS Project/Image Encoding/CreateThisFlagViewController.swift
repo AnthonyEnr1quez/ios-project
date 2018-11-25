@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let cellReuseId = "pixel"
+
 class CreateThisFlagViewController: UIViewController {
     
     @IBOutlet weak var flag: UICollectionView!
@@ -67,11 +69,11 @@ class CreateThisFlagViewController: UIViewController {
 extension CreateThisFlagViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 135
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath)
         cell.backgroundColor = .black
         return cell
     }
