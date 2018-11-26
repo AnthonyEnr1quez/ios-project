@@ -16,13 +16,12 @@ class problemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let exProblem = SnapModel.snap.getProblem(0)
-        
-        algorithmTV.text = exProblem.algorithm
-        stepsTV.text = exProblem.steps
-        
-        // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        let problem = SnapModel.snap.getProblem(SnapModel.snap.selectedRowIndex())
+        navigationItem.title = problem.name
+        algorithmTV.text = problem.algorithm
+        stepsTV.text = problem.steps
     }
     /*
      // MARK: - Navigation
