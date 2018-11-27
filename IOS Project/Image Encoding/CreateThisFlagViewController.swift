@@ -14,6 +14,8 @@ class CreateThisFlagViewController: UIViewController {
     
     @IBOutlet weak var flag: UICollectionView!
     
+    let italyFlag:Flag = FlagRepository.flagRepository[1]
+    
     var touchedCells:[UICollectionViewCell]!
     
     override func viewDidLoad() {
@@ -74,7 +76,7 @@ extension CreateThisFlagViewController: UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath)
-        cell.backgroundColor = .black
+        cell.backgroundColor = .white
         return cell
     }
     
