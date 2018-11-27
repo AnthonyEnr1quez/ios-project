@@ -25,6 +25,7 @@
 		E280CE1521641071005392A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E280CE1321641071005392A1 /* LaunchScreen.storyboard */; };
 		E2B194802191128400583976 /* BaseConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1947F2191128400583976 /* BaseConversion.swift */; };
 		ED21EA1A21A4CA5C00154C33 /* CreateThisFlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */; };
+		EDB2633C21AD219D0053C3D8 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB2633B21AD219D0053C3D8 /* Flag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E280CE1621641071005392A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B1947F2191128400583976 /* BaseConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConversion.swift; sourceTree = "<group>"; };
 		ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThisFlagViewController.swift; sourceTree = "<group>"; };
+		EDB2633B21AD219D0053C3D8 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				BAE103692178EE71007428E4 /* GIFInfoViewController.swift */,
 				BAE103652178EE32007428E4 /* RGBViewController.swift */,
 				ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */,
+				EDB2633B21AD219D0053C3D8 /* Flag.swift */,
 			);
 			path = "Image Encoding";
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				BA6D55702166ACA0006BC7BF /* ImageEncodingTableViewController.swift in Sources */,
 				BA6D556E2166AB2F006BC7BF /* FOCTableViewController.swift in Sources */,
 				ED21EA1A21A4CA5C00154C33 /* CreateThisFlagViewController.swift in Sources */,
+				EDB2633C21AD219D0053C3D8 /* Flag.swift in Sources */,
 				3F37B4032186C09800D72DB9 /* SnapModel.swift in Sources */,
 				3F613BA02175456D00AA752A /* FetchExecuteViewController.swift in Sources */,
 				E2B194802191128400583976 /* BaseConversion.swift in Sources */,
