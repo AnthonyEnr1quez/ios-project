@@ -15,7 +15,6 @@
 		BA00DDB3216ACB170099AE32 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00DDB2216ACB170099AE32 /* FirstViewController.swift */; };
 		BA00DDB5216AE0F70099AE32 /* SnapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */; };
 		BA6D556E2166AB2F006BC7BF /* FOCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D556D2166AB2F006BC7BF /* FOCTableViewController.swift */; };
-		BA6D55702166ACA0006BC7BF /* ImageEncodingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D556F2166ACA0006BC7BF /* ImageEncodingTableViewController.swift */; };
 		BAE103662178EE32007428E4 /* RGBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103652178EE32007428E4 /* RGBViewController.swift */; };
 		BAE103682178EE4B007428E4 /* CompressionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103672178EE4B007428E4 /* CompressionViewController.swift */; };
 		BAE1036A2178EE71007428E4 /* GIFInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103692178EE71007428E4 /* GIFInfoViewController.swift */; };
@@ -37,7 +36,6 @@
 		BA00DDB2216ACB170099AE32 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapTableViewController.swift; sourceTree = "<group>"; };
 		BA6D556D2166AB2F006BC7BF /* FOCTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOCTableViewController.swift; sourceTree = "<group>"; };
-		BA6D556F2166ACA0006BC7BF /* ImageEncodingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEncodingTableViewController.swift; sourceTree = "<group>"; };
 		BAE103652178EE32007428E4 /* RGBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBViewController.swift; sourceTree = "<group>"; };
 		BAE103672178EE4B007428E4 /* CompressionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionViewController.swift; sourceTree = "<group>"; };
 		BAE103692178EE71007428E4 /* GIFInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFInfoViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 		BA5BCB5D219B3D770093C6FF /* Image Encoding */ = {
 			isa = PBXGroup;
 			children = (
-				BA6D556F2166ACA0006BC7BF /* ImageEncodingTableViewController.swift */,
 				BAE103672178EE4B007428E4 /* CompressionViewController.swift */,
 				BAE103692178EE71007428E4 /* GIFInfoViewController.swift */,
 				BAE103652178EE32007428E4 /* RGBViewController.swift */,
@@ -187,7 +184,6 @@
 			files = (
 				19FF8ABB217C1D22008D501C /* hintViewController.swift in Sources */,
 				19FF8AB9217C1D01008D501C /* problemViewController.swift in Sources */,
-				BA6D55702166ACA0006BC7BF /* ImageEncodingTableViewController.swift in Sources */,
 				BA6D556E2166AB2F006BC7BF /* FOCTableViewController.swift in Sources */,
 				ED21EA1A21A4CA5C00154C33 /* CreateThisFlagViewController.swift in Sources */,
 				EDB2633C21AD219D0053C3D8 /* Flag.swift in Sources */,
