@@ -84,7 +84,7 @@ class FetchExecuteViewController: UIViewController{
         
        
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             
             self.FetchTXT.backgroundColor = UIColor.orange
             
@@ -93,7 +93,7 @@ class FetchExecuteViewController: UIViewController{
             self.InstructionTXT.text = "ADD 4000, 2000, 2080"
             
             }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 20.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
             
             self.decodeTXT.backgroundColor = UIColor.orange
             self.FetchTXT.backgroundColor = UIColor.white
@@ -103,7 +103,7 @@ class FetchExecuteViewController: UIViewController{
             self.data2MemTXT.text = "2080"
             
             }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 30.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 20.0) {
             
             self.DFetchTXT.backgroundColor = UIColor.orange
             self.decodeTXT.backgroundColor = UIColor.white
@@ -119,7 +119,7 @@ class FetchExecuteViewController: UIViewController{
             
             
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 40.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 30.0) {
             
             self.ExecuteTXT.backgroundColor = UIColor.orange
             self.DFetchTXT.backgroundColor = UIColor.white
@@ -132,7 +132,7 @@ class FetchExecuteViewController: UIViewController{
             self.data2MemTXT.isHidden = true
             
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 60.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 40.0) {
             
             self.rreturn.backgroundColor = UIColor.orange
             self.ExecuteTXT.backgroundColor = UIColor.white
