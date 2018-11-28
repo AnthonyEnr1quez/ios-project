@@ -12,21 +12,50 @@ private let cellReuseId = "pixel"
 
 class CreateThisFlagViewController: UIViewController {
     
-    @IBOutlet weak var flag: UICollectionView!
+    @IBOutlet weak var flagCollectionView: UICollectionView!
+    @IBOutlet weak var firstColorView: UIView!
+    @IBOutlet weak var secondColorView: UIView!
+    @IBOutlet weak var thirdColorView: UIView!
+    @IBOutlet weak var firstColorLabel: UILabel!
+    @IBOutlet weak var secondColorLabel: UILabel!
+    @IBOutlet weak var thirdColorLabel: UILabel!
+    @IBOutlet weak var colorTable: UIView!
+    @IBOutlet weak var lcPairTV: UITextView!
+
     
     let italyFlag:Flag = FlagRepository.flagRepository[1]
-    
+    var selectedColorView:UIView!
     var touchedCells:[UICollectionViewCell]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        firstColorLabel.text = italyFlag.hexLabels[0]
+        secondColorLabel.text = italyFlag.hexLabels[1]
+        thirdColorLabel.text = italyFlag.hexLabels[2]
+        lcPairTV.text = italyFlag.encodingDescription
+        
+        firstColorView.backgroundColor = italyFlag.colors[0]
+        secondColorView.backgroundColor = italyFlag.colors[1]
+        thirdColorView.backgroundColor = italyFlag.colors[2]
+        
+        selectColor(colorView: firstColorView)
+    }
+    
+    private func selectColor(colorView:UIView) {
+        if selectedColorView != nil {
+            selectedColorView.layer.borderWidth = 0
+        }
+        
+        selectedColorView = colorView
+        colorView.layer.borderWidth = 5
+        colorView.layer.borderColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0).cgColor
     }
  
     // if cell is panned across, change its color
-    @IBAction func panGR(_ sender: UIPanGestureRecognizer) {
-        
+    @IBAction func flagPanGR(_ sender: UIPanGestureRecognizer) {
         if sender.state == UIGestureRecognizer.State.began {
             touchedCells = []
         }
@@ -34,8 +63,8 @@ class CreateThisFlagViewController: UIViewController {
         let panLocation = sender.location(in: self.view)
         print(panLocation)
         
-        for cell in flag.visibleCells as [UICollectionViewCell] {
-            let convertedLocation = self.view.convert(cell.frame, from:flag)
+        for cell in flagCollectionView.visibleCells as [UICollectionViewCell] {
+            let convertedLocation = self.view.convert(cell.frame, from:flagCollectionView)
             if !touchedCells.contains(cell) && convertedLocation.contains(panLocation) {
                 touchedCells.append(cell)
                 print("Touched")
@@ -44,16 +73,56 @@ class CreateThisFlagViewController: UIViewController {
         
         if sender.state == UIGestureRecognizer.State.ended && touchedCells.isEmpty == false {
             for cell in touchedCells {
+                if cell.backgroundColor != selectedColorView.backgroundColor {
+                    cell.backgroundColor = selectedColorView.backgroundColor
+                }
                 print(cell)
-                if cell.backgroundColor == .black {
-                    cell.backgroundColor = .red
-                } else {
-                    cell.backgroundColor = .black
+            }
+        }
+    }
+    
+    @IBAction func tapColorTableGR(_ sender: UITapGestureRecognizer) {
+        let tapLocation = sender.location(in: colorTable)
+        print(tapLocation)
+        
+        let colorOptions:[UIView] = [firstColorView, secondColorView, thirdColorView]
+        
+        if sender.state == UIGestureRecognizer.State.ended {
+            for color in colorOptions as [UIView] {
+                if color.frame.contains(tapLocation){
+                    selectColor(colorView: color)
+                    print("new selected color view: \(color)")
                 }
             }
         }
         
     }
+    
+    @IBAction func checkAnswerBtn(_ sender: Any) {
+        var message:String = "Correct!"
+
+        
+        for i in 0..<italyFlag.decodedFlag.count {
+            let cell = flagCollectionView.cellForItem(at: IndexPath(row: i, section: 0))!
+            if cell.backgroundColor != italyFlag.decodedFlag[i] {
+                message = "Incorrect, try again!"
+                break
+            }
+        }
+
+        display(title: message)
+
+        }
+    
+    // Displays a UIAlert
+    // title: String to display
+    func display(title:String){
+        let alert = UIAlertController(title: title, message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -71,12 +140,14 @@ class CreateThisFlagViewController: UIViewController {
 extension CreateThisFlagViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 135
+        return italyFlag.decodedFlag.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath)
-        cell.backgroundColor = .white
+        
+        cell.backgroundColor = italyFlag.decodedFlag[indexPath.row]
+//        cell.backgroundColor = .black
         return cell
     }
     
