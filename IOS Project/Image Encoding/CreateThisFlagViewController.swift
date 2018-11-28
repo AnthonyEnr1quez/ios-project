@@ -23,7 +23,7 @@ class CreateThisFlagViewController: UIViewController {
     @IBOutlet weak var lcPairTV: UITextView!
 
     
-    let italyFlag:Flag = FlagRepository.flagRepository[1]
+    var problemFlag:Flag = FlagRepository.flagRepository.flags.randomElement()!
     var selectedColorView:UIView!
     var touchedCells:[UICollectionViewCell]!
     
@@ -32,14 +32,18 @@ class CreateThisFlagViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        firstColorLabel.text = italyFlag.hexLabels[0]
-        secondColorLabel.text = italyFlag.hexLabels[1]
-        thirdColorLabel.text = italyFlag.hexLabels[2]
-        lcPairTV.text = italyFlag.encodingDescription
+        setupVC()
+    }
+    
+    func setupVC() {
+        firstColorLabel.text = problemFlag.hexLabels[0]
+        secondColorLabel.text = problemFlag.hexLabels[1]
+        thirdColorLabel.text = problemFlag.hexLabels[2]
+        lcPairTV.text = problemFlag.encodingDescription
         
-        firstColorView.backgroundColor = italyFlag.colors[0]
-        secondColorView.backgroundColor = italyFlag.colors[1]
-        thirdColorView.backgroundColor = italyFlag.colors[2]
+        firstColorView.backgroundColor = problemFlag.colors[0]
+        secondColorView.backgroundColor = problemFlag.colors[1]
+        thirdColorView.backgroundColor = problemFlag.colors[2]
         
         selectColor(colorView: firstColorView)
     }
@@ -81,6 +85,19 @@ class CreateThisFlagViewController: UIViewController {
         }
     }
     
+    @IBAction func flagTapGR(_ sender: UITapGestureRecognizer) {
+        let tapLocation = sender.location(in: flagCollectionView)
+        print(tapLocation)
+        
+        if sender.state == UIGestureRecognizer.State.ended {
+            for cell in flagCollectionView.visibleCells as [UICollectionViewCell] {
+                if cell.frame.contains(tapLocation) && cell.backgroundColor != selectedColorView.backgroundColor  {
+                        cell.backgroundColor = selectedColorView.backgroundColor
+                }
+            }
+        }
+    }
+    
     @IBAction func tapColorTableGR(_ sender: UITapGestureRecognizer) {
         let tapLocation = sender.location(in: colorTable)
         print(tapLocation)
@@ -98,13 +115,24 @@ class CreateThisFlagViewController: UIViewController {
         
     }
     
+    @IBAction func newProblemBtn(_ sender: Any) {
+        var newFlag = FlagRepository.flagRepository.flags.randomElement()!
+        while problemFlag.runLengthEncoding == newFlag.runLengthEncoding {
+            newFlag = FlagRepository.flagRepository.flags.randomElement()!
+        }
+        problemFlag = newFlag
+        setupVC()
+        flagCollectionView.reloadData()
+    }
+    
+    
     @IBAction func checkAnswerBtn(_ sender: Any) {
         var message:String = "Correct!"
 
         
-        for i in 0..<italyFlag.decodedFlag.count {
+        for i in 0..<problemFlag.decodedFlag.count {
             let cell = flagCollectionView.cellForItem(at: IndexPath(row: i, section: 0))!
-            if cell.backgroundColor != italyFlag.decodedFlag[i] {
+            if cell.backgroundColor != problemFlag.decodedFlag[i] {
                 message = "Incorrect, try again!"
                 break
             }
@@ -112,7 +140,7 @@ class CreateThisFlagViewController: UIViewController {
 
         display(title: message)
 
-        }
+    }
     
     // Displays a UIAlert
     // title: String to display
@@ -140,14 +168,13 @@ class CreateThisFlagViewController: UIViewController {
 extension CreateThisFlagViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return italyFlag.decodedFlag.count
+        return problemFlag.decodedFlag.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath)
         
-        cell.backgroundColor = italyFlag.decodedFlag[indexPath.row]
-//        cell.backgroundColor = .black
+        cell.backgroundColor = .black
         return cell
     }
     

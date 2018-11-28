@@ -408,10 +408,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5z-lt-F4A">
-                                <rect key="frame" x="59" y="348" width="257" height="42"/>
+                                <rect key="frame" x="27" y="348" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Generate Problem"/>
+                                <state key="normal" title="Generate New Problem"/>
+                                <connections>
+                                    <action selector="newProblemBtn:" destination="EVF-Tt-ATA" eventType="touchUpInside" id="tFc-FH-xNg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbl-6t-QRr">
                                 <rect key="frame" x="157" y="755" width="99" height="30"/>
@@ -594,6 +597,7 @@
                         <viewLayoutGuide key="safeArea" id="oXh-g4-0Tz"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="gBf-Na-o6c" appends="YES" id="k3e-v8-Xlx"/>
+                            <outletCollection property="gestureRecognizers" destination="2gC-wC-VRK" appends="YES" id="7YE-l1-oPy"/>
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create this flag" id="li7-OK-38u"/>
@@ -620,6 +624,11 @@
                         <action selector="flagPanGR:" destination="EVF-Tt-ATA" id="iLI-IX-pqu"/>
                     </connections>
                 </panGestureRecognizer>
+                <tapGestureRecognizer id="2gC-wC-VRK">
+                    <connections>
+                        <action selector="flagTapGR:" destination="EVF-Tt-ATA" id="lYs-AU-0X3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3304.6875" y="-103.125"/>
         </scene>
