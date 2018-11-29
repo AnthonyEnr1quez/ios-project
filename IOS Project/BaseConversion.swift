@@ -29,13 +29,17 @@ struct BaseConversion {
             self.decimal = String(Int(input, radix: 16)!)
             self.binary = String(Int(input, radix: 16)!, radix: 2)
         case "Decimal":
-            self.decimal = input
-            self.binary = String(Int(input)!, radix: 2)
-            self.hexadecimal = String(Int(input)!, radix: 16)
+            if (Int(input, radix: 2) != nil) {
+                self.decimal = input
+                self.binary = String(Int(input)!, radix: 2)
+                self.hexadecimal = String(Int(input)!, radix: 16)
+            }
         case "Binary":
-            self.binary = input
-            self.hexadecimal = String(Int(input, radix: 2)!, radix: 16)
-            self.decimal = String(Int(input, radix: 2)!)
+            if (Int(input, radix: 2) != nil) {
+                self.binary = input
+                self.hexadecimal = String(Int(input, radix: 2)!, radix: 16)
+                self.decimal = String(Int(input, radix: 2)!)
+            }
         default:
             self.hexadecimal = input
         }
