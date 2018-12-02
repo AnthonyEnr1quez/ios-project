@@ -20,10 +20,9 @@ class GIFInfoViewController: UIViewController {
     @IBOutlet weak var secondColorLabel: UILabel!
     @IBOutlet weak var thirdColorLabel: UILabel!
     
-    
-    
     let hungaryFlag:Flag = FlagRepository.flagRepository[0]
     
+    // sets labels and colors for color table
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,8 +59,6 @@ extension GIFInfoViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath)
-        
-        
         cell.backgroundColor = hungaryFlag.decodedFlag[indexPath.row]
         return cell
     }
