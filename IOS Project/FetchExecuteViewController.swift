@@ -10,13 +10,21 @@ import UIKit
 
 
 class FetchExecuteViewController: UIViewController{
-
+    
+    var newTimer:DispatchSourceTimer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
         resetBtn.isHidden = true
+        
+    }
+    
+    private func makeTimer () {
+        newTimer = DispatchSource.makeTimerSource()
+        newTimer?.schedule(deadline: .now(), repeating: 1.0)
     }
     
     @IBOutlet weak var InstructionTXT: UITextField!
@@ -78,31 +86,42 @@ class FetchExecuteViewController: UIViewController{
     @IBOutlet weak var resetBtn: UIButton!
     
     @IBAction func PlayButton(_ sender: Any) {
-        playBtn.isHidden = true
+        var usedTime = makeTimer()
+        
+        
+        //playBtn.isHidden = true
         InsAddressTXT.text = "\(800)"
         addMemTXT.text = "\(800)"
         ContentMemTXT.text = "ADD 4000, 2000, 2080"
-       
+       tempFunc()
+        
+       // self.timer
+        
+    }
+    
+    @objc func tempFunc() {
         // fetch
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { self.fetch() }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { self.fetch() }
         
         // decode
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) { self.decode() }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { self.decode() }
         
         // dataFetch
-        DispatchQueue.main.asyncAfter(deadline: .now() + 20.0) { self.dataFetch() }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { self.dataFetch() }
         
         // iExecution
-        DispatchQueue.main.asyncAfter(deadline: .now() + 30.0) { self.iExecution() }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) { self.iExecution() }
         
         // rresult
-        DispatchQueue.main.asyncAfter(deadline: .now() + 40.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             self.rresult()
             self.resetBtn.isHidden = false
         }
     }
     
     @IBAction func reset(_ sender: Any) {
+        
+     
         
         rreturn.backgroundColor = .white
         InsAddressTXT.isHidden = false
@@ -132,7 +151,7 @@ class FetchExecuteViewController: UIViewController{
         data2MemTXT.text = ""
         
         
-        playBtn.isHidden = false
+        //playBtn.isHidden = false
     }
     
     

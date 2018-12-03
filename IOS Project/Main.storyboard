@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="giO-6X-dEs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="giO-6X-dEs">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1074,7 +1074,7 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ALU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6g-yJ-qw1">
-                                <rect key="frame" x="671" y="84" width="184" height="35"/>
+                                <rect key="frame" x="541" y="83" width="184" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -1257,7 +1257,7 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNL-Or-4LA">
-                                <rect key="frame" x="816" y="77" width="84" height="48"/>
+                                <rect key="frame" x="733" y="77" width="84" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <state key="normal" title="Reset">
@@ -1857,15 +1857,15 @@ It returns the result to the memory of the destination address.
         </scene>
     </scenes>
     <resources>
-        <image name="BytesTable" width="799" height="137"/>
+        <image name="BytesTable" width="1598" height="274"/>
         <image name="RGB Pixel" width="105" height="94"/>
-        <image name="RGBFlashlights" width="584.6400146484375" height="310.55999755859375"/>
-        <image name="RunLengthEncoding" width="491" height="262"/>
-        <image name="compress" width="90" height="90"/>
-        <image name="encode" width="90" height="90"/>
+        <image name="RGBFlashlights" width="1218" height="647"/>
+        <image name="RunLengthEncoding" width="982" height="524"/>
+        <image name="compress" width="45" height="45"/>
+        <image name="encode" width="45" height="45"/>
         <image name="first" width="30" height="30"/>
         <image name="rgb bulb" width="32" height="32"/>
         <image name="second" width="30" height="30"/>
-        <image name="table" width="90" height="90"/>
+        <image name="table" width="45" height="45"/>
     </resources>
 </document>
