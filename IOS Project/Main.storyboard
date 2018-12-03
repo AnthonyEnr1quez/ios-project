@@ -136,12 +136,12 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvy-Gg-34c">
                                 <rect key="frame" x="0.0" y="70" width="1024" height="556"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <mutableString key="text">How can we store the following binary series efficiently?  00000000000111111110011111111001111111100000000000  By writing the number of 0's, 1's, 0's, etc., we can compress it greatly, by merely storing the length of each alternating sequence of 0's and 1's.  We have 11 0's, 8 1's, 2 0's, so we could agree to store this instead:   11:0 8:1 2:0 8:1 2:0 8:1 11:0  If we agree to always send the number of 0's and 1's starting with 0's, we could shorten this to just:
+                                <string key="text">How can we store the following binary series efficiently?  00000000000111111110011111111001111111100000000000  By writing the number of 0's, 1's, 0's, etc., we can compress it greatly, by merely storing the length of each alternating sequence of 0's and 1's.  We have 11 0's, 8 1's, 2 0's, so we could agree to store this instead:   11:0 8:1 2:0 8:1 2:0 8:1 11:0  If we agree to always send the number of 0's and 1's starting with 0's, we could shorten this to just:
 
 11 8 2 8 2 8 11 
 
 Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86%)
- This is how Run-Length encoding works!</mutableString>
+ This is how Run-Length encoding works!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -162,7 +162,7 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xHh-0v-1q4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Image Compression" id="aDw-uH-zsV"/>
+                    <tabBarItem key="tabBarItem" title="Image Compression" image="compress" selectedImage="compress" id="aDw-uH-zsV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trJ-X1-8WM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -412,7 +412,7 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Eny-hF-YKe"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="RGB Colors" id="Kcn-gh-lGM"/>
+                    <tabBarItem key="tabBarItem" title="RGB Colors" image="rgb bulb" selectedImage="rgb bulb" id="Kcn-gh-lGM"/>
                     <connections>
                         <outlet property="colorGeneratedView" destination="PDS-qi-SGO" id="i70-HR-dZb"/>
                         <outlet property="numPickerView" destination="cae-DE-RM8" id="5Yw-Xq-n1a"/>
@@ -675,7 +675,7 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                             <outletCollection property="gestureRecognizers" destination="2gC-wC-VRK" appends="YES" id="7YE-l1-oPy"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Decode this Flag" id="li7-OK-38u"/>
+                    <tabBarItem key="tabBarItem" title="Decode this Flag" image="table" selectedImage="table" id="li7-OK-38u"/>
                     <connections>
                         <outlet property="colorTable" destination="DTI-RM-cmx" id="r4R-kd-dZL"/>
                         <outlet property="firstColorLabel" destination="ghp-ZS-2aD" id="nQ3-4s-nU2"/>
@@ -1674,7 +1674,7 @@ It returns the result to the memory of the destination address.
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kY0-nH-YFE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="GIF Encoding" id="XhE-dx-bHo"/>
+                    <tabBarItem key="tabBarItem" title="GIF Encoding" image="encode" selectedImage="encode" id="XhE-dx-bHo"/>
                     <connections>
                         <outlet property="firstColorLabel" destination="54Z-uO-IdV" id="Ddd-Ll-cz3"/>
                         <outlet property="firstColorView" destination="bTM-4x-I14" id="r4a-d5-svb"/>
@@ -1830,7 +1830,11 @@ turn right 90 repeat 4 times</string>
         <image name="RGB Pixel" width="105" height="94"/>
         <image name="RGBFlashlights" width="584.6400146484375" height="310.55999755859375"/>
         <image name="RunLengthEncoding" width="491" height="262"/>
+        <image name="compress" width="90" height="90"/>
+        <image name="encode" width="90" height="90"/>
         <image name="first" width="30" height="30"/>
+        <image name="rgb bulb" width="32" height="32"/>
         <image name="second" width="30" height="30"/>
+        <image name="table" width="90" height="90"/>
     </resources>
 </document>
