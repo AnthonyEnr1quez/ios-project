@@ -1,5 +1,5 @@
 //
-//  hintViewController.swift
+//  HintViewController.swift
 //  IOS Project
 //
 //  Created by chaithanya manas reddy on 20/10/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class hintViewController: UIViewController {
+class HintViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

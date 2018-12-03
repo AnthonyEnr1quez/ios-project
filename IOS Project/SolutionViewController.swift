@@ -1,5 +1,5 @@
 //
-//  solutionViewController.swift
+//  SolutionViewController.swift
 //  IOS Project
 //
 //  Created by chaithanya manas reddy on 20/10/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class solutionViewController: UIViewController {
+class SolutionViewController: UIViewController {
     
 
     override func viewDidLoad() {

@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19FF8AB9217C1D01008D501C /* problemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF8AB8217C1D01008D501C /* problemViewController.swift */; };
-		19FF8ABB217C1D22008D501C /* hintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF8ABA217C1D22008D501C /* hintViewController.swift */; };
-		19FF8ABD217C1D36008D501C /* solutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF8ABC217C1D36008D501C /* solutionViewController.swift */; };
+		19FF8AB9217C1D01008D501C /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF8AB8217C1D01008D501C /* ProblemViewController.swift */; };
+		19FF8ABB217C1D22008D501C /* HintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF8ABA217C1D22008D501C /* HintViewController.swift */; };
+		19FF8ABD217C1D36008D501C /* SolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FF8ABC217C1D36008D501C /* SolutionViewController.swift */; };
 		3F37B4032186C09800D72DB9 /* SnapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37B4022186C09800D72DB9 /* SnapModel.swift */; };
 		3F613BA02175456D00AA752A /* FetchExecuteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F613B9F2175456D00AA752A /* FetchExecuteViewController.swift */; };
 		BA00DDB3216ACB170099AE32 /* BaseConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00DDB2216ACB170099AE32 /* BaseConversionViewController.swift */; };
 		BA00DDB5216AE0F70099AE32 /* SnapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */; };
-		BA6D556E2166AB2F006BC7BF /* FOCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D556D2166AB2F006BC7BF /* FOCTableViewController.swift */; };
 		BAE103662178EE32007428E4 /* RGBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103652178EE32007428E4 /* RGBViewController.swift */; };
 		BAE103682178EE4B007428E4 /* CompressionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103672178EE4B007428E4 /* CompressionViewController.swift */; };
 		BAE1036A2178EE71007428E4 /* GIFInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103692178EE71007428E4 /* GIFInfoViewController.swift */; };
@@ -29,14 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		19FF8AB8217C1D01008D501C /* problemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = problemViewController.swift; sourceTree = "<group>"; };
-		19FF8ABA217C1D22008D501C /* hintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hintViewController.swift; sourceTree = "<group>"; };
-		19FF8ABC217C1D36008D501C /* solutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = solutionViewController.swift; sourceTree = "<group>"; };
+		19FF8AB8217C1D01008D501C /* ProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemViewController.swift; sourceTree = "<group>"; };
+		19FF8ABA217C1D22008D501C /* HintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintViewController.swift; sourceTree = "<group>"; };
+		19FF8ABC217C1D36008D501C /* SolutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionViewController.swift; sourceTree = "<group>"; };
 		3F37B4022186C09800D72DB9 /* SnapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapModel.swift; sourceTree = "<group>"; };
 		3F613B9F2175456D00AA752A /* FetchExecuteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchExecuteViewController.swift; sourceTree = "<group>"; };
 		BA00DDB2216ACB170099AE32 /* BaseConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConversionViewController.swift; sourceTree = "<group>"; };
 		BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapTableViewController.swift; sourceTree = "<group>"; };
-		BA6D556D2166AB2F006BC7BF /* FOCTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOCTableViewController.swift; sourceTree = "<group>"; };
 		BAE103652178EE32007428E4 /* RGBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBViewController.swift; sourceTree = "<group>"; };
 		BAE103672178EE4B007428E4 /* CompressionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionViewController.swift; sourceTree = "<group>"; };
 		BAE103692178EE71007428E4 /* GIFInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFInfoViewController.swift; sourceTree = "<group>"; };
@@ -66,9 +64,9 @@
 		BA5BCB5D219B3D770093C6FF /* Image Encoding */ = {
 			isa = PBXGroup;
 			children = (
+				BAE103652178EE32007428E4 /* RGBViewController.swift */,
 				BAE103672178EE4B007428E4 /* CompressionViewController.swift */,
 				BAE103692178EE71007428E4 /* GIFInfoViewController.swift */,
-				BAE103652178EE32007428E4 /* RGBViewController.swift */,
 				ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */,
 				EDB2633B21AD219D0053C3D8 /* Flag.swift */,
 			);
@@ -96,20 +94,19 @@
 			children = (
 				BA5BCB5D219B3D770093C6FF /* Image Encoding */,
 				E280CE082164106E005392A1 /* AppDelegate.swift */,
-				E280CE0E2164106E005392A1 /* Main.storyboard */,
-				3F613B9F2175456D00AA752A /* FetchExecuteViewController.swift */,
-				3F37B4022186C09800D72DB9 /* SnapModel.swift */,
-				19FF8ABA217C1D22008D501C /* hintViewController.swift */,
-				19FF8AB8217C1D01008D501C /* problemViewController.swift */,
-				19FF8ABC217C1D36008D501C /* solutionViewController.swift */,
-				BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */,
-				BA00DDB2216ACB170099AE32 /* BaseConversionViewController.swift */,
-				BA6D556D2166AB2F006BC7BF /* FOCTableViewController.swift */,
 				E280CE1121641071005392A1 /* Assets.xcassets */,
 				E280CE1321641071005392A1 /* LaunchScreen.storyboard */,
 				E280CE1621641071005392A1 /* Info.plist */,
-				E2B1947F2191128400583976 /* BaseConversion.swift */,
+				E280CE0E2164106E005392A1 /* Main.storyboard */,
 				ED33E3CA21B498F6000AF69E /* LandingViewController.swift */,
+				E2B1947F2191128400583976 /* BaseConversion.swift */,
+				BA00DDB2216ACB170099AE32 /* BaseConversionViewController.swift */,
+				3F613B9F2175456D00AA752A /* FetchExecuteViewController.swift */,
+				3F37B4022186C09800D72DB9 /* SnapModel.swift */,
+				BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */,
+				19FF8AB8217C1D01008D501C /* ProblemViewController.swift */,
+				19FF8ABA217C1D22008D501C /* HintViewController.swift */,
+				19FF8ABC217C1D36008D501C /* SolutionViewController.swift */,
 			);
 			path = "IOS Project";
 			sourceTree = "<group>";
@@ -185,10 +182,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19FF8ABB217C1D22008D501C /* hintViewController.swift in Sources */,
-				19FF8AB9217C1D01008D501C /* problemViewController.swift in Sources */,
+				19FF8ABB217C1D22008D501C /* HintViewController.swift in Sources */,
+				19FF8AB9217C1D01008D501C /* ProblemViewController.swift in Sources */,
 				ED33E3CB21B498F6000AF69E /* LandingViewController.swift in Sources */,
-				BA6D556E2166AB2F006BC7BF /* FOCTableViewController.swift in Sources */,
 				ED21EA1A21A4CA5C00154C33 /* CreateThisFlagViewController.swift in Sources */,
 				EDB2633C21AD219D0053C3D8 /* Flag.swift in Sources */,
 				3F37B4032186C09800D72DB9 /* SnapModel.swift in Sources */,
@@ -200,7 +196,7 @@
 				BAE103662178EE32007428E4 /* RGBViewController.swift in Sources */,
 				BA00DDB5216AE0F70099AE32 /* SnapTableViewController.swift in Sources */,
 				BAE1036A2178EE71007428E4 /* GIFInfoViewController.swift in Sources */,
-				19FF8ABD217C1D36008D501C /* solutionViewController.swift in Sources */,
+				19FF8ABD217C1D36008D501C /* SolutionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

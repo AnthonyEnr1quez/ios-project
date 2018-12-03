@@ -1552,7 +1552,7 @@ It returns the result to the memory of the destination address.
         <!--Solution-->
         <scene sceneID="fa5-aw-4fm">
             <objects>
-                <viewController id="aUe-gR-CbJ" customClass="solutionViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aUe-gR-CbJ" customClass="SolutionViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ajr-i1-DWE" customClass="pro">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1582,7 +1582,7 @@ It returns the result to the memory of the destination address.
         <!--Hint-->
         <scene sceneID="MHI-hL-2VR">
             <objects>
-                <viewController id="B4q-Hr-zsd" customClass="hintViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="B4q-Hr-zsd" customClass="HintViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G0G-ay-x21">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1612,7 +1612,7 @@ It returns the result to the memory of the destination address.
         <!--ada-->
         <scene sceneID="RbQ-VB-Niw">
             <objects>
-                <viewController id="bk3-zd-tuF" customClass="problemViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bk3-zd-tuF" customClass="ProblemViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mbm-3s-Nl1">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

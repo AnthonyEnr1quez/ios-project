@@ -1,5 +1,5 @@
 //
-//  problemViewController.swift
+//  ProblemViewController.swift
 //  IOS Project
 //
 //  Created by chaithanya manas reddy on 20/10/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class problemViewController: UIViewController {
+class ProblemViewController: UIViewController {
     
     
     @IBOutlet weak var algorithmTV: UITextView!
