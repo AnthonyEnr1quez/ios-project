@@ -175,8 +175,8 @@ extension CreateThisFlagViewController: UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath)
         
-        //cell.backgroundColor = problemFlag.decodedFlag[indexPath.row]
-        cell.backgroundColor = .black
+        cell.backgroundColor = problemFlag.decodedFlag[indexPath.row]
+        //cell.backgroundColor = .black
         return cell
     }
     

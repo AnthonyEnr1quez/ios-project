@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  BaseConversionViewController.swift
 //  IOS Project
 //
 //  Created by vijay kumar on 10/2/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class BaseConversionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet var Picker: UIPickerView!
     
