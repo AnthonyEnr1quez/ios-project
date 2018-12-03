@@ -15,12 +15,12 @@
 		BA00DDB3216ACB170099AE32 /* BaseConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00DDB2216ACB170099AE32 /* BaseConversionViewController.swift */; };
 		BA00DDB5216AE0F70099AE32 /* SnapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */; };
 		BAE103662178EE32007428E4 /* RGBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103652178EE32007428E4 /* RGBViewController.swift */; };
-		BAE1036A2178EE71007428E4 /* GIFInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103692178EE71007428E4 /* GIFInfoViewController.swift */; };
+		BAE1036A2178EE71007428E4 /* GIFEncodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103692178EE71007428E4 /* GIFEncodingViewController.swift */; };
 		E280CE092164106E005392A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E280CE082164106E005392A1 /* AppDelegate.swift */; };
 		E280CE1221641071005392A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E280CE1121641071005392A1 /* Assets.xcassets */; };
 		E280CE1521641071005392A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E280CE1321641071005392A1 /* LaunchScreen.storyboard */; };
 		E2B194802191128400583976 /* BaseConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1947F2191128400583976 /* BaseConversion.swift */; };
-		ED21EA1A21A4CA5C00154C33 /* CreateThisFlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */; };
+		ED21EA1A21A4CA5C00154C33 /* DecodeThisFlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21EA1921A4CA5C00154C33 /* DecodeThisFlagViewController.swift */; };
 		ED33E3CB21B498F6000AF69E /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33E3CA21B498F6000AF69E /* LandingViewController.swift */; };
 		ED33E3D221B4DF7F000AF69E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED33E3D121B4DF7E000AF69E /* Main.storyboard */; };
 		EDB2633C21AD219D0053C3D8 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB2633B21AD219D0053C3D8 /* Flag.swift */; };
@@ -35,14 +35,14 @@
 		BA00DDB2216ACB170099AE32 /* BaseConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConversionViewController.swift; sourceTree = "<group>"; };
 		BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapTableViewController.swift; sourceTree = "<group>"; };
 		BAE103652178EE32007428E4 /* RGBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBViewController.swift; sourceTree = "<group>"; };
-		BAE103692178EE71007428E4 /* GIFInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFInfoViewController.swift; sourceTree = "<group>"; };
+		BAE103692178EE71007428E4 /* GIFEncodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFEncodingViewController.swift; sourceTree = "<group>"; };
 		E280CE052164106E005392A1 /* IOS Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E280CE082164106E005392A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E280CE1121641071005392A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E280CE1421641071005392A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E280CE1621641071005392A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B1947F2191128400583976 /* BaseConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConversion.swift; sourceTree = "<group>"; };
-		ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThisFlagViewController.swift; sourceTree = "<group>"; };
+		ED21EA1921A4CA5C00154C33 /* DecodeThisFlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeThisFlagViewController.swift; sourceTree = "<group>"; };
 		ED33E3CA21B498F6000AF69E /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		ED33E3D121B4DF7E000AF69E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EDB2633B21AD219D0053C3D8 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
@@ -63,8 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				BAE103652178EE32007428E4 /* RGBViewController.swift */,
-				BAE103692178EE71007428E4 /* GIFInfoViewController.swift */,
-				ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */,
+				BAE103692178EE71007428E4 /* GIFEncodingViewController.swift */,
+				ED21EA1921A4CA5C00154C33 /* DecodeThisFlagViewController.swift */,
 				EDB2633B21AD219D0053C3D8 /* Flag.swift */,
 			);
 			path = "Image Encoding";
@@ -182,7 +182,7 @@
 				19FF8ABB217C1D22008D501C /* HintViewController.swift in Sources */,
 				19FF8AB9217C1D01008D501C /* ProblemViewController.swift in Sources */,
 				ED33E3CB21B498F6000AF69E /* LandingViewController.swift in Sources */,
-				ED21EA1A21A4CA5C00154C33 /* CreateThisFlagViewController.swift in Sources */,
+				ED21EA1A21A4CA5C00154C33 /* DecodeThisFlagViewController.swift in Sources */,
 				EDB2633C21AD219D0053C3D8 /* Flag.swift in Sources */,
 				3F37B4032186C09800D72DB9 /* SnapModel.swift in Sources */,
 				3F613BA02175456D00AA752A /* FetchExecuteViewController.swift in Sources */,
@@ -191,7 +191,7 @@
 				BA00DDB3216ACB170099AE32 /* BaseConversionViewController.swift in Sources */,
 				BAE103662178EE32007428E4 /* RGBViewController.swift in Sources */,
 				BA00DDB5216AE0F70099AE32 /* SnapTableViewController.swift in Sources */,
-				BAE1036A2178EE71007428E4 /* GIFInfoViewController.swift in Sources */,
+				BAE1036A2178EE71007428E4 /* GIFEncodingViewController.swift in Sources */,
 				19FF8ABD217C1D36008D501C /* SolutionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

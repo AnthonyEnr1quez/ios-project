@@ -56,4 +56,5 @@ extension RGBViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         let blueInput = Double(pickerView.selectedRow(inComponent: 2))
         colorGeneratedView.backgroundColor = UIColor(red: CGFloat(redInput/255.0), green: CGFloat(greenInput/255.0), blue: CGFloat(blueInput/255.0), alpha: 1.0)
     }
+    
 }

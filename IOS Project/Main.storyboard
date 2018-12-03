@@ -445,14 +445,16 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
         <!--Decode This Flag-->
         <scene sceneID="BhR-BS-mpH">
             <objects>
-                <viewController title="Decode This Flag" id="EVF-Tt-ATA" customClass="CreateThisFlagViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Decode This Flag" id="EVF-Tt-ATA" customClass="DecodeThisFlagViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bN3-gP-JOM">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5z-lt-F4A">
-                                <rect key="frame" x="27" y="348" width="320" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5z-lt-F4A">
+                                <rect key="frame" x="20" y="331" width="334" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="P8q-I4-K5H"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Generate New Problem"/>
                                 <connections>
@@ -464,11 +466,14 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Check Answer"/>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P8c-dS-Fdd">
-                                <rect key="frame" x="381" y="88" width="634" height="380"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P8c-dS-Fdd">
+                                <rect key="frame" x="381" y="88" width="635" height="380"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="TE8-Ri-RV0"/>
+                                    <constraint firstAttribute="width" constant="635" id="hlP-fa-Q86"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tQ1-6R-tTE">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -490,9 +495,8 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                     <outlet property="delegate" destination="EVF-Tt-ATA" id="U3t-nh-i6z"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DTI-RM-cmx">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTI-RM-cmx">
                                 <rect key="frame" x="20" y="88" width="334" height="235"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pvo-Jw-NW3">
                                         <rect key="frame" x="14" y="35" width="300" height="2"/>
@@ -590,53 +594,81 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                     <outletCollection property="gestureRecognizers" destination="7oy-aT-OLh" appends="YES" id="gLx-qs-Ubw"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Given:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUT-cH-wdN">
-                                <rect key="frame" x="0.0" y="515" width="157" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Select a color from the Color Table and swipe/tap on the flag to change to color." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7e-xS-6dK">
-                                <rect key="frame" x="27" y="398" width="320" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LC-Pairs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNI-0m-Mu6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LC-Pairs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNI-0m-Mu6">
                                 <rect key="frame" x="20" y="601" width="157" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="4NW-3F-t5z"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill in the Flag based on the LC-Pairs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xh-2k-wl8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill in the Flag based on the LC-Pairs below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xh-2k-wl8">
                                 <rect key="frame" x="310" y="539" width="549" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="U3F-PU-A9B"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="lc pair loaded here" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9I8-eG-g6a">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="lc pair loaded here" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9I8-eG-g6a">
                                 <rect key="frame" x="165" y="601" width="839" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7N-9Q-HOK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7N-9Q-HOK">
                                 <rect key="frame" x="570" y="489" width="257" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="KMo-yP-IWN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Check Answer"/>
                                 <connections>
                                     <action selector="checkAnswerBtn:" destination="EVF-Tt-ATA" eventType="touchUpInside" id="cTY-pL-NZq"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Select a color from the Color Table. Then swipe/tap on the flag to change to color." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i7e-xS-6dK">
+                                <rect key="frame" x="20" y="404" width="320" height="136"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="PzE-Wj-Sqt"/>
+                                    <constraint firstAttribute="width" constant="320" id="V4z-aT-1DM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="i7e-xS-6dK" firstAttribute="top" secondItem="c5z-lt-F4A" secondAttribute="bottom" constant="8" symbolic="YES" id="59Y-Qz-Rfp"/>
+                            <constraint firstItem="P8c-dS-Fdd" firstAttribute="leading" secondItem="DTI-RM-cmx" secondAttribute="trailing" constant="27" id="83n-sI-ABB"/>
+                            <constraint firstItem="3xh-2k-wl8" firstAttribute="leading" secondItem="oXh-g4-0Tz" secondAttribute="leading" constant="310" id="AXh-4y-3Ic"/>
+                            <constraint firstItem="oXh-g4-0Tz" firstAttribute="bottom" secondItem="9I8-eG-g6a" secondAttribute="bottom" constant="12" id="CSh-eS-fX3"/>
+                            <constraint firstItem="DTI-RM-cmx" firstAttribute="trailing" secondItem="c5z-lt-F4A" secondAttribute="trailing" id="KW3-j2-v0D"/>
+                            <constraint firstItem="dNI-0m-Mu6" firstAttribute="top" secondItem="i7e-xS-6dK" secondAttribute="bottom" constant="61" id="KrX-JN-tcL"/>
+                            <constraint firstItem="T7N-9Q-HOK" firstAttribute="centerX" secondItem="P8c-dS-Fdd" secondAttribute="centerX" id="ODD-xV-4du"/>
+                            <constraint firstItem="c5z-lt-F4A" firstAttribute="top" secondItem="DTI-RM-cmx" secondAttribute="bottom" constant="8" symbolic="YES" id="Ogf-Iq-CPD"/>
+                            <constraint firstItem="oXh-g4-0Tz" firstAttribute="trailing" secondItem="T7N-9Q-HOK" secondAttribute="trailing" constant="197" id="SIk-4M-XeJ"/>
+                            <constraint firstItem="DTI-RM-cmx" firstAttribute="top" secondItem="oXh-g4-0Tz" secondAttribute="top" constant="18" id="UrP-a7-IO1"/>
+                            <constraint firstItem="DTI-RM-cmx" firstAttribute="top" secondItem="P8c-dS-Fdd" secondAttribute="top" id="VRb-lf-rob"/>
+                            <constraint firstItem="i7e-xS-6dK" firstAttribute="leading" secondItem="dNI-0m-Mu6" secondAttribute="leading" id="WJz-2Y-wGo"/>
+                            <constraint firstItem="T7N-9Q-HOK" firstAttribute="top" secondItem="P8c-dS-Fdd" secondAttribute="bottom" constant="21" id="XJh-1i-G48"/>
+                            <constraint firstItem="DTI-RM-cmx" firstAttribute="leading" secondItem="c5z-lt-F4A" secondAttribute="leading" id="ZpL-yk-ruB"/>
+                            <constraint firstItem="9I8-eG-g6a" firstAttribute="leading" secondItem="oXh-g4-0Tz" secondAttribute="leading" constant="165" id="cn6-3T-l47"/>
+                            <constraint firstItem="DTI-RM-cmx" firstAttribute="leading" secondItem="bN3-gP-JOM" secondAttribute="leadingMargin" id="gb7-Zm-7Dz"/>
+                            <constraint firstItem="9I8-eG-g6a" firstAttribute="top" secondItem="3xh-2k-wl8" secondAttribute="bottom" constant="8" symbolic="YES" id="kPa-Ba-zsW"/>
+                            <constraint firstItem="dNI-0m-Mu6" firstAttribute="top" secondItem="9I8-eG-g6a" secondAttribute="top" id="mLc-ed-8oo"/>
+                            <constraint firstItem="3xh-2k-wl8" firstAttribute="top" secondItem="T7N-9Q-HOK" secondAttribute="bottom" constant="8" symbolic="YES" id="mQX-wX-7Pb"/>
+                            <constraint firstItem="9I8-eG-g6a" firstAttribute="trailing" secondItem="bN3-gP-JOM" secondAttribute="trailingMargin" id="pzk-UN-EBB"/>
+                            <constraint firstItem="oXh-g4-0Tz" firstAttribute="trailing" secondItem="dNI-0m-Mu6" secondAttribute="trailing" constant="847" id="s46-hs-kaF"/>
+                            <constraint firstItem="oXh-g4-0Tz" firstAttribute="bottom" secondItem="dNI-0m-Mu6" secondAttribute="bottom" constant="63" id="sEm-oP-YVx"/>
+                            <constraint firstItem="3xh-2k-wl8" firstAttribute="centerX" secondItem="9I8-eG-g6a" secondAttribute="centerX" id="uJA-Uo-eo8"/>
+                            <constraint firstItem="P8c-dS-Fdd" firstAttribute="leading" secondItem="i7e-xS-6dK" secondAttribute="trailing" constant="41" id="ugh-53-HRj"/>
+                            <constraint firstItem="c5z-lt-F4A" firstAttribute="leading" secondItem="i7e-xS-6dK" secondAttribute="leading" id="ziN-Xv-6ON"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oXh-g4-0Tz"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="gBf-Na-o6c" appends="YES" id="k3e-v8-Xlx"/>
@@ -673,7 +705,7 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2474" y="-712"/>
+            <point key="canvasLocation" x="2473.828125" y="-712.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yk9-2h-TJ3">
@@ -1347,7 +1379,7 @@ It returns the result to the memory of the destination address.
         <!--GIF Encoding-->
         <scene sceneID="AQ4-Id-vfU">
             <objects>
-                <viewController title="GIF Encoding" id="PBJ-lW-chl" customClass="GIFInfoViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="GIF Encoding" id="PBJ-lW-chl" customClass="GIFEncodingViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tIp-4w-HuI">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -15,27 +15,23 @@ struct Flag {
     var colors:[UIColor]
     var runLengthEncoding:[Int]
     var hexLabels:[String]
+    
+    // creates an array filled with correct color order
     var decodedFlag:[UIColor] {
-        get {
             var fullSequence:[UIColor] = []
-            
             for (index, value) in runLengthEncoding.enumerated() {
                 fullSequence.append(contentsOf: repeatElement(colors[index % 3], count: value))
             }
-            
             return fullSequence
-        }
     }
+    
+    // pairs run length encoding value with color index
     var encodingDescription:String {
-        get {
             var desc:String = ""
-            
             for (index, value) in runLengthEncoding.enumerated() {
                 desc.append("\(value):\(index % 3 + 1) ")
             }
-            
             return desc
-        }
     }
 }
 
@@ -82,7 +78,7 @@ private let colombiaEncoding = [75,30,30]
 private let colombia = Flag(country: "Colombia", colors: convert(colombiaLabels), runLengthEncoding: colombiaEncoding, hexLabels: colombiaLabels)
 
 private let dominicanRepublicLabels = ["00 2D 62","FF FF FF","CE 11 26"]
-private let dominicanRepublicEncoding = [6,3,6,6,3,6,6,3,6,0,6,0,1,1,1,0,27,1,0,1,0,1,6,6,0,3,0,6,0,6,0,3,0,6,0,6,0,3,0,6,0]
+private let dominicanRepublicEncoding = [6,3,6,6,3,6,6,3,6,0,6,0,1,1,1,0,27,1,0,1,0,1,6,6,0,3,0,6,0,6,0,3,0,6,0,6,0,3,0,6]
 private let dominicanRepublic = Flag(country: "Dominican Republic", colors: convert(dominicanRepublicLabels), runLengthEncoding: dominicanRepublicEncoding, hexLabels: dominicanRepublicLabels)
 
 private let estoniaLabels = ["00 72 CE", "00 00 00", "FF FF FF"]

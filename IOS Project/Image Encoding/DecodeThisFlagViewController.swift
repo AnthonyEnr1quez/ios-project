@@ -1,5 +1,5 @@
 //
-//  CreateThisFlagViewController.swift
+//  DecodeThisFlagViewController.swift
 //  IOS Project
 //
 //  Created by Anthony Enriquez on 11/20/18.
@@ -10,7 +10,7 @@ import UIKit
 
 private let cellReuseId = "pixel"
 
-class CreateThisFlagViewController: UIViewController {
+class DecodeThisFlagViewController: UIViewController {
     
     @IBOutlet weak var flagCollectionView: UICollectionView!
     @IBOutlet weak var firstColorView: UIView!
@@ -22,9 +22,7 @@ class CreateThisFlagViewController: UIViewController {
     @IBOutlet weak var colorTable: UIView!
     @IBOutlet weak var lcPairTV: UITextView!
 
-    
-//    var problemFlag:Flag = FlagRepository.flagRepository.flags.randomElement()!
-    var problemFlag:Flag = FlagRepository.flagRepository.flags[FlagRepository.flagRepository.flags.count-1]
+    var problemFlag:Flag = FlagRepository.flagRepository.flags.randomElement()!
     var selectedColorView:UIView!
     var touchedCells:[UICollectionViewCell]!
     
@@ -36,8 +34,9 @@ class CreateThisFlagViewController: UIViewController {
         setupVC()
     }
     
-    // adds info to color table
-    //sets first selected color
+    // adds properties to color table
+    // sets first selected color
+    // display lc pair text
     private func setupVC() {
         firstColorLabel.text = problemFlag.hexLabels[0]
         secondColorLabel.text = problemFlag.hexLabels[1]
@@ -53,7 +52,7 @@ class CreateThisFlagViewController: UIViewController {
     
     // removes border from old color
     // changes selected color value to new color
-    // adds border to new color
+    // adds black border to new color, red if new color is black
     private func selectColor(colorView:UIView) {
         if selectedColorView != nil {
             selectedColorView.layer.borderWidth = 0
@@ -61,7 +60,12 @@ class CreateThisFlagViewController: UIViewController {
         
         selectedColorView = colorView
         colorView.layer.borderWidth = 5
-        colorView.layer.borderColor = UIColor.black.cgColor
+        
+        if colorView.backgroundColor == UIColor(red: 0, green: 0, blue: 0, alpha: 1.0) {
+            colorView.layer.borderColor = UIColor.red.cgColor
+        } else {
+            colorView.layer.borderColor = UIColor.black.cgColor
+        }
     }
  
     // if cell is panned across, change its color
@@ -108,7 +112,7 @@ class CreateThisFlagViewController: UIViewController {
         
         if sender.state == UIGestureRecognizer.State.ended {
             for color in colorOptions as [UIView] {
-                if color.frame.contains(tapLocation){
+                if color.frame.contains(tapLocation) {
                     selectColor(colorView: color)
                 }
             }
@@ -127,7 +131,7 @@ class CreateThisFlagViewController: UIViewController {
         flagCollectionView.reloadData()
     }
     
-    // evaluates if the flag color layout is correct
+    // evaluates if the decoded flag entered is correct
     @IBAction func checkAnswerBtn(_ sender: Any) {
         var title:String = "Correct!"
         var message:String = "The flag's country is \(problemFlag.country)"
@@ -152,7 +156,6 @@ class CreateThisFlagViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -166,7 +169,7 @@ class CreateThisFlagViewController: UIViewController {
 }
 
 // use delegates and datasource to set up flag layout for collection view
-extension CreateThisFlagViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension DecodeThisFlagViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return problemFlag.decodedFlag.count
@@ -175,8 +178,10 @@ extension CreateThisFlagViewController: UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath)
         
-        cell.backgroundColor = problemFlag.decodedFlag[indexPath.row]
-        //cell.backgroundColor = .black
+        // use if you want to view the flags
+        //cell.backgroundColor = problemFlag.decodedFlag[indexPath.row]
+        cell.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
+        
         return cell
     }
     

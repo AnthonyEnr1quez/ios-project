@@ -10,7 +10,7 @@ import UIKit
 
 private let cellReuseId = "pixel"
 
-class GIFInfoViewController: UIViewController {
+class GIFEncodingViewController: UIViewController {
 
     @IBOutlet weak var flagCollectionView: UICollectionView!
     @IBOutlet weak var firstColorView: UIView!
@@ -50,7 +50,7 @@ class GIFInfoViewController: UIViewController {
 }
 
 // use delegates and datasource to set up flag layout for collection view
-extension GIFInfoViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension GIFEncodingViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return hungaryFlag.decodedFlag.count
@@ -77,4 +77,5 @@ extension GIFInfoViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 2
     }
+    
 }
