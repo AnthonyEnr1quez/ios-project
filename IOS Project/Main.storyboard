@@ -128,121 +128,45 @@
         <!--Image Compression-->
         <scene sceneID="c70-Ls-iIm">
             <objects>
-                <viewController title="Image Compression" id="qm6-61-6OL" customClass="CompressionViewController" customModule="IOS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Image Compression" automaticallyAdjustsScrollViewInsets="NO" id="qm6-61-6OL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oGS-Ke-KWu">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1BD-MO-Qv4">
-                                <rect key="frame" x="0.0" y="70" width="1024" height="880"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJv-Ny-NHj">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1000"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How can we store the following binary series efficiently?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAM-XK-0pB">
-                                                <rect key="frame" x="150" y="18" width="722" height="54"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00000000000111111110011111111001111111100000000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GD-Cf-36c">
-                                                <rect key="frame" x="182" y="80" width="678" height="54"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ene-0r-dW3">
-                                                <rect key="frame" x="88" y="142" width="847" height="79"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <string key="text">By writing the number of 0's, 1's, 0's, etc., we can compress it greatly, by merely storing the length of each alternating sequence of 0's and 1's.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We have 11 0's, 8 1's, 2 0's, so we could agree to store this instead: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jg-45-XJg">
-                                                <rect key="frame" x="163" y="229" width="717" height="54"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11:0 8:1 2:0 8:1 2:0 8:1 11:0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxn-PJ-2Ht">
-                                                <rect key="frame" x="150" y="303" width="717" height="54"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="If we agree to always send the number of 0's and 1's starting with 0's, we could shorten this to just:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1JT-Kq-EvA">
-                                                <rect key="frame" x="98" y="365" width="847" height="79"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11 8 2 8 2 8 11 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQ4-JG-n3U">
-                                                <rect key="frame" x="163" y="452" width="717" height="54"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DKM-Nd-Cyk">
-                                                <rect key="frame" x="19" y="514" width="997" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <string key="text">Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86%)
-</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is how Run-Length encoding works!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0K-4u-EPn">
-                                                <rect key="frame" x="159" y="586" width="717" height="54"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RunLengthEncoding" translatesAutoresizingMaskIntoConstraints="NO" id="MbQ-S4-UJz">
-                                                <rect key="frame" x="264" y="633" width="514.5" height="275"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1000" id="jC6-Uy-Xzc"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="jJv-Ny-NHj" secondAttribute="trailing" id="0Rr-6g-z3R"/>
-                                    <constraint firstItem="jJv-Ny-NHj" firstAttribute="leading" secondItem="1BD-MO-Qv4" secondAttribute="leading" id="Xsx-r0-J1I"/>
-                                    <constraint firstAttribute="bottom" secondItem="jJv-Ny-NHj" secondAttribute="bottom" id="fvh-S6-cCa"/>
-                                    <constraint firstItem="jJv-Ny-NHj" firstAttribute="top" secondItem="1BD-MO-Qv4" secondAttribute="top" id="sr8-3G-LgN"/>
-                                </constraints>
-                            </scrollView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lvy-Gg-34c">
+                                <rect key="frame" x="0.0" y="70" width="1024" height="556"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <mutableString key="text">How can we store the following binary series efficiently?  00000000000111111110011111111001111111100000000000  By writing the number of 0's, 1's, 0's, etc., we can compress it greatly, by merely storing the length of each alternating sequence of 0's and 1's.  We have 11 0's, 8 1's, 2 0's, so we could agree to store this instead:   11:0 8:1 2:0 8:1 2:0 8:1 11:0  If we agree to always send the number of 0's and 1's starting with 0's, we could shorten this to just:
+
+11 8 2 8 2 8 11 
+
+Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86%)
+ This is how Run-Length encoding works!</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RunLengthEncoding" translatesAutoresizingMaskIntoConstraints="NO" id="MbQ-S4-UJz">
+                                <rect key="frame" x="362" y="550" width="300" height="160"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1BD-MO-Qv4" firstAttribute="top" secondItem="xHh-0v-1q4" secondAttribute="top" id="APb-p1-MBW"/>
-                            <constraint firstItem="1BD-MO-Qv4" firstAttribute="trailing" secondItem="xHh-0v-1q4" secondAttribute="trailing" id="BcA-iZ-mxD"/>
-                            <constraint firstItem="1BD-MO-Qv4" firstAttribute="leading" secondItem="xHh-0v-1q4" secondAttribute="leading" id="FH6-Nh-0AU"/>
-                            <constraint firstItem="jJv-Ny-NHj" firstAttribute="width" secondItem="oGS-Ke-KWu" secondAttribute="width" id="Pt2-S4-t18"/>
-                            <constraint firstItem="1BD-MO-Qv4" firstAttribute="bottom" secondItem="xHh-0v-1q4" secondAttribute="bottom" id="Zfh-jq-E6Z"/>
+                            <constraint firstItem="xHh-0v-1q4" firstAttribute="bottom" secondItem="MbQ-S4-UJz" secondAttribute="bottom" constant="8" id="5Q2-i9-Kbc"/>
+                            <constraint firstItem="Lvy-Gg-34c" firstAttribute="leading" secondItem="oGS-Ke-KWu" secondAttribute="leading" id="81F-db-0Qg"/>
+                            <constraint firstAttribute="trailing" secondItem="Lvy-Gg-34c" secondAttribute="trailing" id="9Zq-lD-cIe"/>
+                            <constraint firstItem="Lvy-Gg-34c" firstAttribute="top" secondItem="xHh-0v-1q4" secondAttribute="top" id="R0b-1r-pMv"/>
+                            <constraint firstItem="Lvy-Gg-34c" firstAttribute="centerX" secondItem="MbQ-S4-UJz" secondAttribute="centerX" id="TY4-7f-M7H"/>
+                            <constraint firstItem="MbQ-S4-UJz" firstAttribute="top" secondItem="xHh-0v-1q4" secondAttribute="top" constant="480" id="XU3-s9-jEG"/>
+                            <constraint firstItem="xHh-0v-1q4" firstAttribute="bottom" secondItem="Lvy-Gg-34c" secondAttribute="bottom" constant="92" id="cLX-JV-v6s"/>
+                            <constraint firstItem="MbQ-S4-UJz" firstAttribute="leading" secondItem="xHh-0v-1q4" secondAttribute="leading" constant="362" id="oO1-sU-hV8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xHh-0v-1q4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Image Compression" id="aDw-uH-zsV"/>
-                    <size key="freeformSize" width="1024" height="1000"/>
-                    <connections>
-                        <outlet property="scrollView" destination="1BD-MO-Qv4" id="BSp-S6-RFZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trJ-X1-8WM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2487" y="-1683"/>
+            <point key="canvasLocation" x="2474" y="-1623"/>
         </scene>
         <!--RGB Colors-->
         <scene sceneID="OJI-5V-Y0v">
@@ -501,7 +425,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="EoY-wr-Bq1">
             <objects>
-                <tabBarController storyboardIdentifier="AIE" id="RTq-M5-urW" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AIE" automaticallyAdjustsScrollViewInsets="NO" id="RTq-M5-urW" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jjB-pY-9rv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1428,18 +1352,6 @@ It returns the result to the memory of the destination address.
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idG-Tv-f26">
-                                <rect key="frame" x="474" y="60" width="550" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">A GIF file consists of 3 elements:
-    - a color look-up table 
-    - image size (rows x columns)
-    - data: run length encoding of the image itself
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hhc-RP-OAk">
                                 <rect key="frame" x="670" y="215" width="334" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1562,54 +1474,65 @@ It returns the result to the memory of the destination address.
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dimensions: 9 x 15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYV-QW-OZe">
-                                <rect key="frame" x="688" y="458" width="298" height="54"/>
+                                <rect key="frame" x="688" y="458" width="298" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Raw format size: 9 x 15 x 3 (# of colors) = 405 bytes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8O-1e-D37">
-                                <rect key="frame" x="20" y="497" width="660" height="54"/>
+                                <rect key="frame" x="20" y="497" width="660" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Using GIF encoding:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1c-sb-7Ic">
                                 <rect key="frame" x="29" y="559" width="331" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Length Color(lc)-pairs: 45:1 45:2 45:3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozU-xD-Sd6">
-                                <rect key="frame" x="356" y="559" width="539" height="54"/>
+                                <rect key="frame" x="356" y="559" width="539" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hungary Flag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Um-5q-Rqp">
-                                <rect key="frame" x="92" y="116" width="341" height="54"/>
+                                <rect key="frame" x="92" y="116" width="341" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(405-18)/405 = 95.56% size reduction!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ov1-mn-cbZ">
-                                <rect key="frame" x="166" y="664" width="692" height="54"/>
+                                <rect key="frame" x="166" y="664" width="692" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GIF Format Size: 3 lc-pairs x 2 bytes + 12 bytes(table) = 18 bytes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM2-vm-Cpb">
-                                <rect key="frame" x="122" y="602" width="780" height="54"/>
+                                <rect key="frame" x="122" y="602" width="780" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idG-Tv-f26">
+                                <rect key="frame" x="20" y="70" width="550" height="141"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">A GIF file consists of 3 elements:
+    - a color look-up table 
+    - image size (rows x columns)
+    - data: run length encoding of the image itself</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="kY0-nH-YFE"/>

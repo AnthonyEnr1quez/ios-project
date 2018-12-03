@@ -15,7 +15,6 @@
 		BA00DDB3216ACB170099AE32 /* BaseConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00DDB2216ACB170099AE32 /* BaseConversionViewController.swift */; };
 		BA00DDB5216AE0F70099AE32 /* SnapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */; };
 		BAE103662178EE32007428E4 /* RGBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103652178EE32007428E4 /* RGBViewController.swift */; };
-		BAE103682178EE4B007428E4 /* CompressionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103672178EE4B007428E4 /* CompressionViewController.swift */; };
 		BAE1036A2178EE71007428E4 /* GIFInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103692178EE71007428E4 /* GIFInfoViewController.swift */; };
 		E280CE092164106E005392A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E280CE082164106E005392A1 /* AppDelegate.swift */; };
 		E280CE1221641071005392A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E280CE1121641071005392A1 /* Assets.xcassets */; };
@@ -36,7 +35,6 @@
 		BA00DDB2216ACB170099AE32 /* BaseConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConversionViewController.swift; sourceTree = "<group>"; };
 		BA00DDB4216AE0F70099AE32 /* SnapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapTableViewController.swift; sourceTree = "<group>"; };
 		BAE103652178EE32007428E4 /* RGBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBViewController.swift; sourceTree = "<group>"; };
-		BAE103672178EE4B007428E4 /* CompressionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionViewController.swift; sourceTree = "<group>"; };
 		BAE103692178EE71007428E4 /* GIFInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFInfoViewController.swift; sourceTree = "<group>"; };
 		E280CE052164106E005392A1 /* IOS Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E280CE082164106E005392A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				BAE103652178EE32007428E4 /* RGBViewController.swift */,
-				BAE103672178EE4B007428E4 /* CompressionViewController.swift */,
 				BAE103692178EE71007428E4 /* GIFInfoViewController.swift */,
 				ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */,
 				EDB2633B21AD219D0053C3D8 /* Flag.swift */,
@@ -190,7 +187,6 @@
 				3F37B4032186C09800D72DB9 /* SnapModel.swift in Sources */,
 				3F613BA02175456D00AA752A /* FetchExecuteViewController.swift in Sources */,
 				E2B194802191128400583976 /* BaseConversion.swift in Sources */,
-				BAE103682178EE4B007428E4 /* CompressionViewController.swift in Sources */,
 				E280CE092164106E005392A1 /* AppDelegate.swift in Sources */,
 				BA00DDB3216ACB170099AE32 /* BaseConversionViewController.swift in Sources */,
 				BAE103662178EE32007428E4 /* RGBViewController.swift in Sources */,
