@@ -17,8 +17,10 @@ class BaseConversionViewController: UIViewController, UIPickerViewDelegate, UIPi
     @IBOutlet var decimalValueLabel: UILabel!
     @IBOutlet var binaryValueLabel: UILabel!
     
-    var inputFormat: String = "HEX"
+    var inputFormat:String = "HEX"
     var pickerData:[String] = [String]()
+    
+    var converter = BaseConversion.instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,6 @@ class BaseConversionViewController: UIViewController, UIPickerViewDelegate, UIPi
         self.Picker.dataSource = self
 
         pickerData = ["HEX", "Decimal", "Binary"]
-        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -48,18 +49,14 @@ class BaseConversionViewController: UIViewController, UIPickerViewDelegate, UIPi
     }
     
     @IBAction func convert(_ sender: Any) {
-        
-        
-        if let input = valueTextField.text {
-            if let baseConversion:BaseConversion = BaseConversion(input: input, type: inputFormat) {
-                
-                hexValueLabel.text = "\(baseConversion.getHexadecimal())"
-                decimalValueLabel.text = "\(baseConversion.getDecimal())"
-                binaryValueLabel.text = "\(baseConversion.getBinary())"
+        if valueTextField.text != "" {
+            let input = valueTextField.text!
+            if converter.checkInput(input: input, type: inputFormat) {
+                converter.convert(input: input, type: inputFormat)
+                hexValueLabel.text = converter.getHexadecimal()
+                decimalValueLabel.text = converter.getDecimal()
+                binaryValueLabel.text = converter.getBinary()
             }
         }
     }
-    
-    
 }
-
