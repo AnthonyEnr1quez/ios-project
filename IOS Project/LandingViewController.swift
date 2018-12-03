@@ -31,17 +31,17 @@ class LandingViewController: UIViewController {
         baseConversionBtn.layer.shadowRadius = 10
         baseConversionBtn.layer.shadowOpacity = 1.0
         
-        imageEncodingBtn.layer.cornerRadius = 30
+        imageEncodingBtn.layer.cornerRadius = 20
         imageEncodingBtn.layer.shadowColor = UIColor.darkGray.cgColor
         imageEncodingBtn.layer.shadowRadius = 10
         imageEncodingBtn.layer.shadowOpacity = 1.0
         
-        fetchExecuteBtn.layer.cornerRadius = 30
+        fetchExecuteBtn.layer.cornerRadius = 20
         fetchExecuteBtn.layer.shadowColor = UIColor.darkGray.cgColor
         fetchExecuteBtn.layer.shadowRadius = 10
         fetchExecuteBtn.layer.shadowOpacity = 1.0
         
-        snapBtn.layer.cornerRadius = 30
+        snapBtn.layer.cornerRadius = 20
         snapBtn.layer.shadowColor = UIColor.darkGray.cgColor
         snapBtn.layer.shadowRadius = 10
         snapBtn.layer.shadowOpacity = 1.0

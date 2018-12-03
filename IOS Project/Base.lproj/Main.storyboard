@@ -18,10 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6C-0a-5O9">
-                                <rect key="frame" x="172" y="148" width="300" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap a button to select a section" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyN-dX-QMn">
+                                <rect key="frame" x="316" y="680" width="393" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6C-0a-5O9">
+                                <rect key="frame" x="172" y="150" width="300" height="200"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="OPw-l7-43j"/>
+                                    <constraint firstAttribute="height" constant="200" id="Rks-s7-Y8k"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Base Conversion">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -31,10 +40,13 @@
                                     <segue destination="PVT-Gt-dvJ" kind="show" id="Otn-Gw-9ja"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orb-rw-5PN">
-                                <rect key="frame" x="552" y="148" width="300" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orb-rw-5PN">
+                                <rect key="frame" x="552" y="150" width="300" height="200"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="96N-Ys-egf"/>
+                                    <constraint firstAttribute="height" constant="200" id="U3p-zm-bVp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Image Encoding">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,10 +56,13 @@
                                     <segue destination="RTq-M5-urW" kind="show" id="f3w-We-fxo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltX-or-RU0">
-                                <rect key="frame" x="552" y="420" width="300" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltX-or-RU0">
+                                <rect key="frame" x="552" y="430" width="300" height="200"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="iuf-kF-Kjf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="qrc-Xf-DUM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="SNAP! Problems">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,10 +72,13 @@
                                     <segue destination="s2p-gN-AqV" kind="show" id="f9U-wK-aym"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2v-2p-oO7">
-                                <rect key="frame" x="172" y="420" width="300" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2v-2p-oO7">
+                                <rect key="frame" x="172" y="430" width="300" height="200"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Qkt-ug-REI"/>
+                                    <constraint firstAttribute="height" constant="200" id="rms-JV-EOA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Fetch Execute Cycle">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -70,15 +88,29 @@
                                     <segue destination="UDI-RP-WwI" kind="show" id="lqh-Qj-aAn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap a button to select a section" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyN-dX-QMn">
-                                <rect key="frame" x="316" y="682" width="393" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u6C-0a-5O9" firstAttribute="leading" secondItem="cdy-g3-FHj" secondAttribute="leading" constant="172" id="0vm-qi-IXh"/>
+                            <constraint firstItem="orb-rw-5PN" firstAttribute="top" secondItem="cdy-g3-FHj" secondAttribute="top" constant="80" id="GtU-an-ECN"/>
+                            <constraint firstItem="YyN-dX-QMn" firstAttribute="top" secondItem="c2v-2p-oO7" secondAttribute="bottom" constant="50" id="L0U-mZ-3dl"/>
+                            <constraint firstItem="u6C-0a-5O9" firstAttribute="top" secondItem="cdy-g3-FHj" secondAttribute="top" constant="80" id="Qc9-O5-mUc"/>
+                            <constraint firstItem="cdy-g3-FHj" firstAttribute="trailing" secondItem="YyN-dX-QMn" secondAttribute="trailing" constant="315" id="UVs-xI-0pR"/>
+                            <constraint firstItem="c2v-2p-oO7" firstAttribute="top" secondItem="u6C-0a-5O9" secondAttribute="bottom" constant="80" id="cYA-Kf-TTl"/>
+                            <constraint firstItem="YyN-dX-QMn" firstAttribute="top" secondItem="ltX-or-RU0" secondAttribute="bottom" constant="50" id="cuY-PV-DdM"/>
+                            <constraint firstItem="cdy-g3-FHj" firstAttribute="trailing" secondItem="orb-rw-5PN" secondAttribute="trailing" constant="172" id="eAs-bH-wdH"/>
+                            <constraint firstItem="c2v-2p-oO7" firstAttribute="leading" secondItem="cdy-g3-FHj" secondAttribute="leading" constant="172" id="eYu-bd-i0k"/>
+                            <constraint firstItem="YyN-dX-QMn" firstAttribute="leading" secondItem="cdy-g3-FHj" secondAttribute="leading" constant="316" id="h8U-Qd-v7q"/>
+                            <constraint firstItem="c2v-2p-oO7" firstAttribute="top" secondItem="u6C-0a-5O9" secondAttribute="bottom" constant="80" id="hFU-Mz-1o0"/>
+                            <constraint firstItem="cdy-g3-FHj" firstAttribute="trailing" secondItem="ltX-or-RU0" secondAttribute="trailing" constant="172" id="hnM-fG-h2d"/>
+                            <constraint firstItem="YyN-dX-QMn" firstAttribute="top" secondItem="ltX-or-RU0" secondAttribute="bottom" constant="50" id="j9W-Q5-Cea"/>
+                            <constraint firstItem="orb-rw-5PN" firstAttribute="leading" secondItem="u6C-0a-5O9" secondAttribute="trailing" constant="80" id="jzB-Q4-xcU"/>
+                            <constraint firstItem="ltX-or-RU0" firstAttribute="leading" secondItem="c2v-2p-oO7" secondAttribute="trailing" constant="80" id="m8l-qV-Pn5"/>
+                            <constraint firstItem="ltX-or-RU0" firstAttribute="leading" secondItem="c2v-2p-oO7" secondAttribute="trailing" constant="80" id="mnp-SA-Ak1"/>
+                            <constraint firstItem="ltX-or-RU0" firstAttribute="top" secondItem="orb-rw-5PN" secondAttribute="bottom" constant="80" id="prG-CV-j49"/>
+                            <constraint firstItem="ltX-or-RU0" firstAttribute="top" secondItem="orb-rw-5PN" secondAttribute="bottom" constant="80" id="sgM-xx-CeE"/>
+                            <constraint firstItem="orb-rw-5PN" firstAttribute="leading" secondItem="u6C-0a-5O9" secondAttribute="trailing" constant="80" id="wqn-Yj-Wkv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cdy-g3-FHj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Foundations of Computing Assistant" id="ip6-q0-eDW"/>
