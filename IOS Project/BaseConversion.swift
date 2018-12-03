@@ -81,6 +81,7 @@ struct BaseConversion {
     }
 }
 
+// old
 //struct BaseConversion {
 //
 //    static var instance:BaseConversion = BaseConversion()

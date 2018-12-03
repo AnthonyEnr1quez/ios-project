@@ -1256,6 +1256,18 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNL-Or-4LA">
+                                <rect key="frame" x="816" y="77" width="84" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="0.33877084959999998" blue="0.3806525093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="PlayButton:" destination="Tym-ZO-FDs" eventType="touchUpInside" id="izL-tH-YOf"/>
+                                    <action selector="reset:" destination="Tym-ZO-FDs" eventType="touchUpInside" id="BDu-wR-AvL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="BWx-vc-KC1"/>
@@ -1283,6 +1295,8 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                         <outlet property="data2MemTXT" destination="jba-zF-AmW" id="McS-Tf-D6W"/>
                         <outlet property="data2TXT" destination="wd0-g6-O1g" id="GrQ-SL-q6p"/>
                         <outlet property="decodeTXT" destination="49z-56-cxC" id="hli-dS-OjD"/>
+                        <outlet property="playBtn" destination="CUh-F8-4i6" id="3OC-Pk-nVV"/>
+                        <outlet property="resetBtn" destination="iNL-Or-4LA" id="NgZ-e4-PiX"/>
                         <outlet property="resultTXT" destination="kVG-H2-6f8" id="gFE-iu-VaO"/>
                         <outlet property="rreturn" destination="Hyw-61-TLv" id="lmq-gw-NVy"/>
                     </connections>
