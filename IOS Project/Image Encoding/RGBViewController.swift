@@ -10,40 +10,19 @@ import UIKit
 
 class RGBViewController: UIViewController {
 
-    @IBOutlet weak var redTF: UITextField!
-    @IBOutlet weak var greenTF: UITextField!
-    @IBOutlet weak var blueTF: UITextField!
     @IBOutlet weak var colorGeneratedView: UIView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var numPickerView: UIPickerView!
     
-    // move scrollview to top of screen
-    // put border on color generator
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        scrollView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-        scrollView.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-        
-        colorGeneratedView.layer.borderWidth = 2
-        colorGeneratedView.layer.borderColor = UIColor.black.cgColor
-    }
-    
+    // put border on color generator view
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
 
+        colorGeneratedView.layer.borderWidth = 2
+        colorGeneratedView.layer.borderColor = UIColor.black.cgColor
     }
-    
-    // changes color of colorGeneratedView based on RGB values entered
-    @IBAction func makeColor(_ sender: Any) {
-        if let redInput = Double(redTF.text!), let greenInput = Double(greenTF.text!), let blueInput = Double(blueTF.text!) {
-            if 0 ... 255 ~= redInput && 0 ... 255 ~= greenInput && 0 ... 255 ~= blueInput {
-                colorGeneratedView.backgroundColor = UIColor(red: CGFloat(redInput/255.0), green: CGFloat(greenInput/255.0), blue: CGFloat(blueInput/255.0), alpha: 1.0)
-            }
-        }
-    }
-    
+
     /*
     // MARK: - Navigation
 
@@ -54,4 +33,27 @@ class RGBViewController: UIViewController {
     }
     */
 
+}
+
+// use delegates and datasource to set up picker view
+extension RGBViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 3
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 256
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String(row)
+    }
+    
+    // changes color of colorGeneratedView based on RGB values entered
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let redInput = Double(pickerView.selectedRow(inComponent: 0))
+        let greenInput = Double(pickerView.selectedRow(inComponent: 1))
+        let blueInput = Double(pickerView.selectedRow(inComponent: 2))
+        colorGeneratedView.backgroundColor = UIColor(red: CGFloat(redInput/255.0), green: CGFloat(greenInput/255.0), blue: CGFloat(blueInput/255.0), alpha: 1.0)
+    }
 }
