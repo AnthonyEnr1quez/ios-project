@@ -37,7 +37,6 @@ class GIFInfoViewController: UIViewController {
         thirdColorView.backgroundColor = hungaryFlag.colors[2]
     }
     
-
     /*
     // MARK: - Navigation
 
