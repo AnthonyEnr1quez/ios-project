@@ -10,13 +10,16 @@ import UIKit
 
 class HintViewController: UIViewController {
     
+    @IBOutlet weak var HintImageView: UIImageView!
+    let problem = SnapModel.snap.selectedProblem
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-   HintImageView.image   = UIImage(named:  "\(SnapModel.snap.hintImages[SnapModel.snap.selectedRow]).png")
+        
         // Do any additional setup after loading the view.
+        
+        HintImageView.image = UIImage(named: "\(problem.hint).png")
     }
-    
-    @IBOutlet weak var HintImageView: UIImageView!
     
     /*
     // MARK: - Navigation

@@ -10,19 +10,20 @@ import UIKit
 
 class ProblemViewController: UIViewController {
     
-    
     @IBOutlet weak var algorithmTV: UITextView!
     @IBOutlet weak var stepsTV: UITextView!
+    let problem = SnapModel.snap.selectedProblem
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        let problem = SnapModel.snap.getProblem(SnapModel.snap.selectedRowIndex())
+        
+        // Do any additional setup after loading the view.
+        
         navigationItem.title = problem.name
         algorithmTV.text = problem.algorithm
         stepsTV.text = problem.steps
     }
+    
     /*
      // MARK: - Navigation
      
@@ -33,6 +34,4 @@ class ProblemViewController: UIViewController {
      }
      */
     
-    
 }
-

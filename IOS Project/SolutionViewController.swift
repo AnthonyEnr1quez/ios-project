@@ -10,16 +10,16 @@ import UIKit
 
 class SolutionViewController: UIViewController {
     
-
+    @IBOutlet weak var SolutionImageView: UIImageView!
+    let problem = SnapModel.snap.selectedProblem
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-        SollutionImageView.image   = UIImage(named:  "\(SnapModel.snap.solutionImages[SnapModel.snap.selectedRow]).png")
-//
+        
+        SolutionImageView.image = UIImage(named:  "\(problem.solution).png")
     }
-    
-    @IBOutlet weak var SollutionImageView: UIImageView!
     
     /*
     // MARK: - Navigation
