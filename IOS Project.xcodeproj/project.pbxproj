@@ -18,12 +18,12 @@
 		BAE103682178EE4B007428E4 /* CompressionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103672178EE4B007428E4 /* CompressionViewController.swift */; };
 		BAE1036A2178EE71007428E4 /* GIFInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE103692178EE71007428E4 /* GIFInfoViewController.swift */; };
 		E280CE092164106E005392A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E280CE082164106E005392A1 /* AppDelegate.swift */; };
-		E280CE102164106E005392A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E280CE0E2164106E005392A1 /* Main.storyboard */; };
 		E280CE1221641071005392A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E280CE1121641071005392A1 /* Assets.xcassets */; };
 		E280CE1521641071005392A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E280CE1321641071005392A1 /* LaunchScreen.storyboard */; };
 		E2B194802191128400583976 /* BaseConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1947F2191128400583976 /* BaseConversion.swift */; };
 		ED21EA1A21A4CA5C00154C33 /* CreateThisFlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */; };
 		ED33E3CB21B498F6000AF69E /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33E3CA21B498F6000AF69E /* LandingViewController.swift */; };
+		ED33E3D221B4DF7F000AF69E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED33E3D121B4DF7E000AF69E /* Main.storyboard */; };
 		EDB2633C21AD219D0053C3D8 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB2633B21AD219D0053C3D8 /* Flag.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,13 +40,13 @@
 		BAE103692178EE71007428E4 /* GIFInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFInfoViewController.swift; sourceTree = "<group>"; };
 		E280CE052164106E005392A1 /* IOS Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E280CE082164106E005392A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E280CE0F2164106E005392A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E280CE1121641071005392A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E280CE1421641071005392A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E280CE1621641071005392A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B1947F2191128400583976 /* BaseConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConversion.swift; sourceTree = "<group>"; };
 		ED21EA1921A4CA5C00154C33 /* CreateThisFlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThisFlagViewController.swift; sourceTree = "<group>"; };
 		ED33E3CA21B498F6000AF69E /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		ED33E3D121B4DF7E000AF69E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EDB2633B21AD219D0053C3D8 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,8 +96,8 @@
 				E280CE082164106E005392A1 /* AppDelegate.swift */,
 				E280CE1121641071005392A1 /* Assets.xcassets */,
 				E280CE1321641071005392A1 /* LaunchScreen.storyboard */,
+				ED33E3D121B4DF7E000AF69E /* Main.storyboard */,
 				E280CE1621641071005392A1 /* Info.plist */,
-				E280CE0E2164106E005392A1 /* Main.storyboard */,
 				ED33E3CA21B498F6000AF69E /* LandingViewController.swift */,
 				E2B1947F2191128400583976 /* BaseConversion.swift */,
 				BA00DDB2216ACB170099AE32 /* BaseConversionViewController.swift */,
@@ -169,9 +169,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED33E3D221B4DF7F000AF69E /* Main.storyboard in Resources */,
 				E280CE1521641071005392A1 /* LaunchScreen.storyboard in Resources */,
 				E280CE1221641071005392A1 /* Assets.xcassets in Resources */,
-				E280CE102164106E005392A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,14 +203,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E280CE0E2164106E005392A1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E280CE0F2164106E005392A1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E280CE1321641071005392A1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -353,7 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "foc.IOS-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -372,7 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "foc.IOS-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
