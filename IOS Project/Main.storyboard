@@ -350,6 +350,11 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                     <constraint firstItem="cae-DE-RM8" firstAttribute="leading" secondItem="KF3-bp-Rby" secondAttribute="leading" constant="22" id="hRG-eW-W8V"/>
                                     <constraint firstItem="gHC-u9-VNp" firstAttribute="baseline" secondItem="ff6-91-m7o" secondAttribute="baseline" id="nzX-kR-9vE"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="White is (255,255,255)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apR-xK-8Jm">
                                 <rect key="frame" x="85" y="674" width="307" height="35"/>
@@ -590,6 +595,11 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="7oy-aT-OLh" appends="YES" id="gLx-qs-Ubw"/>
                                 </connections>
@@ -849,7 +859,7 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
         <!--Fetch Execute Tab Bar Controller-->
         <scene sceneID="xf3-2m-wF2">
             <objects>
-                <tabBarController id="UDI-RP-WwI" userLabel="Fetch Execute Tab Bar Controller" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UDI-RP-WwI" userLabel="Fetch Execute Tab Bar Controller" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="kkg-9H-g7K">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -977,6 +987,11 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNt-xZ-74D">
                                 <rect key="frame" x="522" y="122" width="482" height="269"/>
@@ -1041,6 +1056,11 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUh-F8-4i6">
                                 <rect key="frame" x="917" y="78" width="64" height="46"/>
@@ -1133,6 +1153,11 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="                           " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XDI-5x-79a">
                                         <rect key="frame" x="19" y="54" width="124" height="30"/>
@@ -1203,9 +1228,19 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Memory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4U-Dk-lGZ">
                                 <rect key="frame" x="389" y="388" width="206" height="46"/>
@@ -1610,6 +1645,11 @@ It returns the result to the memory of the destination address.
                                     <constraint firstItem="zia-gP-6Gd" firstAttribute="leading" secondItem="54Z-uO-IdV" secondAttribute="trailing" id="xLW-Ym-Wzx"/>
                                     <constraint firstItem="G6P-HC-tLN" firstAttribute="top" secondItem="0zz-HK-9Xn" secondAttribute="top" id="xdA-kf-ltK"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwb-2R-4F7">
                                 <rect key="frame" x="351" y="581" width="301" height="2"/>
