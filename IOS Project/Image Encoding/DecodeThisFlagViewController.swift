@@ -22,7 +22,7 @@ class DecodeThisFlagViewController: UIViewController {
     @IBOutlet weak var colorTable: UIView!
     @IBOutlet weak var lcPairTV: UITextView!
 
-    var problemFlag:Flag = FlagRepository.flagRepository.flags.randomElement()!
+    var problemFlag:Flag = FlagRepository.shared.random()
     var selectedColorView:UIView!
     var touchedCells:[UICollectionViewCell]!
     
@@ -122,9 +122,9 @@ class DecodeThisFlagViewController: UIViewController {
     
     // generates a new random flag and refreshes the view
     @IBAction func newProblemBtn(_ sender: Any) {
-        var newFlag = FlagRepository.flagRepository.flags.randomElement()!
+        var newFlag = FlagRepository.shared.random()
         while problemFlag.runLengthEncoding == newFlag.runLengthEncoding {
-            newFlag = FlagRepository.flagRepository.flags.randomElement()!
+            newFlag = FlagRepository.shared.random()
         }
         problemFlag = newFlag
         setupVC()
@@ -179,7 +179,7 @@ extension DecodeThisFlagViewController: UICollectionViewDataSource, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseId, for: indexPath)
         
         // use if you want to view the flags
-        //cell.backgroundColor = problemFlag.decodedFlag[indexPath.row]
+//        cell.backgroundColor = problemFlag.decodedFlag[indexPath.row]
         cell.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
         
         return cell

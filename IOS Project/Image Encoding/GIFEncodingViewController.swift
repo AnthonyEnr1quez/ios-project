@@ -20,7 +20,7 @@ class GIFEncodingViewController: UIViewController {
     @IBOutlet weak var secondColorLabel: UILabel!
     @IBOutlet weak var thirdColorLabel: UILabel!
     
-    let hungaryFlag:Flag = FlagRepository.flagRepository[0]
+    let hungaryFlag = FlagRepository.shared[0]
     
     // sets labels and colors for color table
     override func viewDidLoad() {

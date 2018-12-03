@@ -724,7 +724,7 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5L-MH-ndt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458" y="1403"/>
+            <point key="canvasLocation" x="-626" y="375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YoI-U0-DzM">
@@ -862,7 +862,7 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooR-zv-43Z" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="608"/>
+            <point key="canvasLocation" x="547" y="-420"/>
         </scene>
         <!--Fetch Execute Cycle-->
         <scene sceneID="ZYX-iZ-kxR">
@@ -1254,7 +1254,7 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqc-ez-0kE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1232.8125" y="1324.21875"/>
+            <point key="canvasLocation" x="928" y="297"/>
         </scene>
         <!--Description-->
         <scene sceneID="YlY-ob-42r">
@@ -1333,7 +1333,7 @@ It returns the result to the memory of the destination address.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxJ-wV-gJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="567" y="1416"/>
+            <point key="canvasLocation" x="261" y="388"/>
         </scene>
         <!--Snap Problems-->
         <scene sceneID="Wv2-3O-BHy">
@@ -1374,7 +1374,7 @@ It returns the result to the memory of the destination address.
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYR-dP-S2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458" y="608"/>
+            <point key="canvasLocation" x="-626" y="-420"/>
         </scene>
         <!--GIF Encoding-->
         <scene sceneID="AQ4-Id-vfU">
@@ -1717,7 +1717,7 @@ It returns the result to the memory of the destination address.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aV0-3I-wcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1138" y="2230"/>
+            <point key="canvasLocation" x="-1250" y="1375"/>
         </scene>
         <!--Hint-->
         <scene sceneID="MHI-hL-2VR">
@@ -1747,7 +1747,7 @@ It returns the result to the memory of the destination address.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4H-1E-lUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458" y="2231"/>
+            <point key="canvasLocation" x="-570" y="1376"/>
         </scene>
         <!--ada-->
         <scene sceneID="RbQ-VB-Niw">
@@ -1822,7 +1822,7 @@ turn right 90 repeat 4 times</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSh-mY-GBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="2230"/>
+            <point key="canvasLocation" x="108" y="1375"/>
         </scene>
     </scenes>
     <resources>
