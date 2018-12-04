@@ -1070,7 +1070,7 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                                     <color key="titleColor" red="1" green="0.33877084963481152" blue="0.38065250927873029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="PlayButton:" destination="Tym-ZO-FDs" eventType="touchUpInside" id="pOV-bg-SmF"/>
+                                    <action selector="playButton:" destination="Tym-ZO-FDs" eventType="touchUpInside" id="pOV-bg-SmF"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WlG-EU-zrc">
@@ -1270,30 +1270,30 @@ Instead of storing 50 numbers, we store just 7 - a huge , 86% saving (43/50 = 86
                     </view>
                     <tabBarItem key="tabBarItem" title="Fetch Execute Cycle" image="second" id="7iG-cA-h3U"/>
                     <connections>
-                        <outlet property="ContentMemTXT" destination="G6m-Na-cfj" id="i7q-Zz-IAZ"/>
-                        <outlet property="DFetchTXT" destination="N4Q-YY-pN5" id="BLc-ma-qCG"/>
-                        <outlet property="DataAdd1TXT" destination="Rvx-kw-FAQ" id="KPR-5N-nSz"/>
-                        <outlet property="DataAdd2TXT" destination="ICL-0J-EyP" id="PCH-RJ-gLJ"/>
-                        <outlet property="DataMEM1TXT" destination="1To-l9-3g4" id="QSI-z6-k3c"/>
-                        <outlet property="DataMEM2TXT" destination="YYp-1f-1SZ" id="Kxc-E4-O7H"/>
-                        <outlet property="ExecuteTXT" destination="Sxe-Dg-VpA" id="fLG-lA-a0P"/>
-                        <outlet property="FetchTXT" destination="PWZ-1M-1qb" id="ygZ-CN-lfd"/>
-                        <outlet property="InsAddressTXT" destination="XDI-5x-79a" id="BZl-yM-tb7"/>
-                        <outlet property="InstructionTXT" destination="1Kt-K4-dKF" id="Aa6-H4-IiZ"/>
-                        <outlet property="Program_counterTXT" destination="ZYc-Yi-JG1" id="itU-Th-Q7B"/>
-                        <outlet property="ResultAddTXT" destination="eiP-ud-MSr" id="oIK-j4-oPv"/>
-                        <outlet property="ResultMEMTXT" destination="3o1-Sa-xC7" id="Edw-b5-4JD"/>
-                        <outlet property="ReturnADDTXT" destination="O9b-G0-lvD" id="HVL-lJ-j0S"/>
                         <outlet property="addMemTXT" destination="hZ3-5m-Hnu" id="kYc-6H-aYK"/>
-                        <outlet property="data1MemTXT" destination="lfR-7b-AWw" id="jev-EC-MsH"/>
+                        <outlet property="contentMemTXT" destination="G6m-Na-cfj" id="i7q-Zz-IAZ"/>
+                        <outlet property="dFetchTXT" destination="N4Q-YY-pN5" id="BLc-ma-qCG"/>
                         <outlet property="data1TXT" destination="I0K-gi-mk4" id="Wye-b5-h4I"/>
-                        <outlet property="data2MemTXT" destination="jba-zF-AmW" id="McS-Tf-D6W"/>
                         <outlet property="data2TXT" destination="wd0-g6-O1g" id="GrQ-SL-q6p"/>
+                        <outlet property="dataAdd1TXT" destination="Rvx-kw-FAQ" id="KPR-5N-nSz"/>
+                        <outlet property="dataAdd2TXT" destination="ICL-0J-EyP" id="PCH-RJ-gLJ"/>
+                        <outlet property="dataAddress1TXT" destination="lfR-7b-AWw" id="jev-EC-MsH"/>
+                        <outlet property="dataAddress2TXT" destination="jba-zF-AmW" id="McS-Tf-D6W"/>
+                        <outlet property="dataMem1TXT" destination="1To-l9-3g4" id="QSI-z6-k3c"/>
+                        <outlet property="dataMem2TXT" destination="YYp-1f-1SZ" id="Kxc-E4-O7H"/>
                         <outlet property="decodeTXT" destination="49z-56-cxC" id="hli-dS-OjD"/>
+                        <outlet property="executeTXT" destination="Sxe-Dg-VpA" id="fLG-lA-a0P"/>
+                        <outlet property="iFetchTXT" destination="PWZ-1M-1qb" id="ygZ-CN-lfd"/>
+                        <outlet property="instructionAddressTXT" destination="XDI-5x-79a" id="BZl-yM-tb7"/>
+                        <outlet property="instructionTXT" destination="1Kt-K4-dKF" id="Aa6-H4-IiZ"/>
                         <outlet property="playBtn" destination="CUh-F8-4i6" id="3OC-Pk-nVV"/>
+                        <outlet property="programCounterTXT" destination="ZYc-Yi-JG1" id="itU-Th-Q7B"/>
+                        <outlet property="rReturnTXT" destination="Hyw-61-TLv" id="lmq-gw-NVy"/>
                         <outlet property="resetLBL" destination="VTP-66-rVG" id="fmj-ri-VW5"/>
+                        <outlet property="resultAddTXT" destination="eiP-ud-MSr" id="oIK-j4-oPv"/>
+                        <outlet property="resultMemTXT" destination="3o1-Sa-xC7" id="Edw-b5-4JD"/>
                         <outlet property="resultTXT" destination="kVG-H2-6f8" id="gFE-iu-VaO"/>
-                        <outlet property="rreturn" destination="Hyw-61-TLv" id="lmq-gw-NVy"/>
+                        <outlet property="returnAddressTXT" destination="O9b-G0-lvD" id="HVL-lJ-j0S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqc-ez-0kE" userLabel="First Responder" sceneMemberID="firstResponder"/>

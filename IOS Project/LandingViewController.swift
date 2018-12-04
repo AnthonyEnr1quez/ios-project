@@ -2,7 +2,7 @@
 //  LandingViewController.swift
 //  IOS Project
 //
-//  Created by ant on 12/2/18.
+//  Created by Anthony Enriquez on 12/2/18.
 //  Copyright © 2018 vijay kumar. All rights reserved.
 //
 

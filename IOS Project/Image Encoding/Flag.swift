@@ -92,7 +92,7 @@ struct FlagRepository {
 }
 
 // just a whole bunch of flags, in a future update could store them using Core Data and add ability to make flags
-// could convert labels and encoding to strings, then store as json objects
+// could convert labels and encoding to strings, then store as json objects in text files
 private let verticalEncoding = [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5]
 private let horizontalEncoding = [45, 45, 45]
 
