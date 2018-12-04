@@ -51,7 +51,7 @@ class BaseConversionViewController: UIViewController, UIPickerViewDelegate, UIPi
     @IBAction func convert(_ sender: Any) {
         if valueTextField.text != "" {
             let input = valueTextField.text!
-            if converter.checkInput(input: input, type: inputFormat) {
+            if converter.checkInput(input: input, type: inputFormat) == true {
                 converter.convert(input: input, type: inputFormat)
                 hexValueLabel.text = converter.getHexadecimal()
                 decimalValueLabel.text = converter.getDecimal()

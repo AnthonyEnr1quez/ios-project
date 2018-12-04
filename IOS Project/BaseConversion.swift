@@ -55,8 +55,8 @@ struct BaseConversion {
     func checkInput(input:String, type:String) -> Bool {
         switch type {
         case "HEX":
-            let acceptedInputs:NSCharacterSet = NSCharacterSet(charactersIn: "abcdefABCDEF")
-            if input.rangeOfCharacter(from: acceptedInputs.inverted) != nil {
+            let acceptedInputs:NSCharacterSet = NSCharacterSet(charactersIn: "0123456789abcdefABCDEF")
+            if input.rangeOfCharacter(from: acceptedInputs.inverted) != nil || input.count >= 8 {
                 return false
             } else {
                 return true
