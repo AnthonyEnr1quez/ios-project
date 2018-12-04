@@ -19,17 +19,26 @@ struct BaseConversion {
 
     init() {}
     
+    // This method handles the conversion of the types
     mutating func convert(input: String, type: String) {
         baseType = type
+        
+        // switch case to convert the values other than the input basing on the type
         switch type {
+        
+        // if the input is "HEX"
         case "HEX":
             hexadecimal = input
             decimal = String(Int(input, radix: 16)!)
             binary = String(Int(input, radix: 16)!, radix: 2)
+        
+        // if the input is "Decimal"
         case "Decimal":
             decimal = input
             binary = String(Int(input)!, radix: 2)
             hexadecimal = String(Int(input)!, radix: 16)
+        
+        // if the input is "Binary"
         case "Binary":
             binary = input
             hexadecimal = String(Int(input, radix: 2)!, radix: 16)
@@ -39,6 +48,7 @@ struct BaseConversion {
         
     }
     
+    // The following methods return respective values
     func getHexadecimal() -> String {
         return hexadecimal
     }
