@@ -9,21 +9,26 @@
 import Foundation
 
 struct SnapModel {
+    
+    // Declaring variables
     static var snap = SnapModel()
     var problems:[Problem] = []
     var selectedProblem:Problem
     
+    // init constructor
     private init() {
         problems = [prob1, prob2, prob3, prob4, prob5, prob6, prob7]
         selectedProblem = problems[0]
     }
     
+    // subscript method
     subscript (index:Int) -> Problem {
         return problems[index]
     }
     
 }
 
+//Creating Problem struct and defining variables
 struct Problem {
     var name:String
     var algorithm:String
@@ -32,6 +37,7 @@ struct Problem {
     var solution:String
 }
 
+// Assignng steps with string values
 let steps1 = "move forward 100 \nturn right 90 \nrepeat 4 times"
 let steps2 = "Ask the user for n \nDraw a square \nMove to a random location \nRepeat steps 2-3 n times"
 let steps3 = "so that squares on the left side of the screen appear red \nsquares on the right side of the screen appear green"
@@ -40,9 +46,11 @@ let steps5 = "Have the computer store a random # between 1-10 in a variable, sec
 let steps6 = "Go to (-240,0) \nTurn east (90°) \nMove two steps \nTurn a random amount, between -5 to 5 \nRepeat steps 3-4 500 (or a gazillion) times"
 let steps7 = "1.Ask the user for how many sides. \n2.Store it in a variable, n \n3.Repeat n times \nMove 100 steps \nTurn 360/n degrees"
 
+//Declaring variables for images with Object values
 let hintImages = ["square hint", "raining hint", "RG hint", "bounce hint", "guess hint", "einstein hint", "pinwheels hint"]
 let solutionImages = ["square solution", "raining solution", "RG solution", "bounce solution", "guess solution", "einstein solution", "pinwheels solution"]
 
+//Creating Problems using Problem struct by using the variables declared above.
 let prob1 = Problem(name: "Draw a Square", algorithm: "Draw a 100 x 100 square", steps: steps1, hint: hintImages[0], solution: solutionImages[0])
 let prob2 = Problem(name: "It's Raining Squares!", algorithm: "Draw n 20x20 squares (where n is supplied by the user) in random locations about the screen (like raindrops, but square)", steps: steps2, hint: hintImages[1], solution: solutionImages[1])
 let prob3 = Problem(name: "It's Raining Red and Green Squares!", algorithm: "Modify your square-raining program \n", steps: steps3, hint: hintImages[2], solution: solutionImages[2])
