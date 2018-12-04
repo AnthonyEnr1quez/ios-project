@@ -11,22 +11,6 @@ import UIKit
 
 class FetchExecuteViewController: UIViewController{
     
-    var newTimer:DispatchSourceTimer?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        resetBtn.isHidden = true
-        
-    }
-    
-    private func makeTimer () {
-        newTimer = DispatchSource.makeTimerSource()
-        newTimer?.schedule(deadline: .now(), repeating: 1.0)
-    }
-    
     @IBOutlet weak var InstructionTXT: UITextField!
 
     @IBOutlet weak var FetchTXT: UITextField!
@@ -83,78 +67,43 @@ class FetchExecuteViewController: UIViewController{
     
     @IBOutlet weak var ResultMEMTXT: UITextField!
     @IBOutlet weak var playBtn: UIButton!
-    @IBOutlet weak var resetBtn: UIButton!
+    @IBOutlet weak var resetLBL: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        
+        resetLBL.isHidden = true
+    }
     
     @IBAction func PlayButton(_ sender: Any) {
-        var usedTime = makeTimer()
+        resetLBL.isHidden = true
+        resetLBL.text = "Will reset in 20 sec"
+        playBtn.isHidden = true
         
-        
-        //playBtn.isHidden = true
         InsAddressTXT.text = "\(800)"
         addMemTXT.text = "\(800)"
         ContentMemTXT.text = "ADD 4000, 2000, 2080"
-       tempFunc()
         
-       // self.timer
-        
-    }
-    
-    @objc func tempFunc() {
         // fetch
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { self.fetch() }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { self.fetch() }
         
         // decode
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { self.decode() }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) { self.decode() }
         
         // dataFetch
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { self.dataFetch() }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 20.0) { self.dataFetch() }
         
         // iExecution
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) { self.iExecution() }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 30.0) { self.iExecution() }
         
         // rresult
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-            self.rresult()
-            self.resetBtn.isHidden = false
-        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 40.0) { self.rresult() }
+        
+        // reset uiview
+        DispatchQueue.main.asyncAfter(deadline: .now() + 60.0) { self.reset() }
     }
-    
-    @IBAction func reset(_ sender: Any) {
-        
-     
-        
-        rreturn.backgroundColor = .white
-        InsAddressTXT.isHidden = false
-        InstructionTXT.isHidden = false
-        data1MemTXT.isHidden = false
-        data2MemTXT.isHidden = false
-        data1TXT.isHidden   = false
-        data2TXT.isHidden = false
-        resetBtn.isHidden = true
-        Program_counterTXT.text = ""
-        addMemTXT.text = ""
-        DataAdd1TXT.text = ""
-        DataAdd2TXT.text = ""
-        ResultAddTXT.text = ""
-        ContentMemTXT.text = ""
-        DataMEM1TXT.text = ""
-        DataMEM2TXT.text = ""
-        ResultMEMTXT.text = ""
-        resultTXT.text = ""
-        ReturnADDTXT.text = ""
-        InstructionTXT.text = ""
-        Program_counterTXT.text = ""
-        data1TXT.text = ""
-        data2TXT.text = ""
-        data1MemTXT.text = ""
-        InsAddressTXT.text = ""
-        data2MemTXT.text = ""
-        
-        
-        //playBtn.isHidden = false
-    }
-    
-    
     
     private func fetch() {
         FetchTXT.backgroundColor = UIColor.orange
@@ -209,7 +158,42 @@ class FetchExecuteViewController: UIViewController{
         data2TXT.isHidden = true
         InsAddressTXT.text = "\(800)"
         ResultMEMTXT.text = "\(42)"
+        
+        resetLBL.textColor = .orange
+        resetLBL.isHidden = false
 
+    }
+    
+    private func reset() {
+        rreturn.backgroundColor = .white
+        InsAddressTXT.isHidden = false
+        InstructionTXT.isHidden = false
+        data1MemTXT.isHidden = false
+        data2MemTXT.isHidden = false
+        data1TXT.isHidden   = false
+        data2TXT.isHidden = false
+        Program_counterTXT.text = ""
+        addMemTXT.text = ""
+        DataAdd1TXT.text = ""
+        DataAdd2TXT.text = ""
+        ResultAddTXT.text = ""
+        ContentMemTXT.text = ""
+        DataMEM1TXT.text = ""
+        DataMEM2TXT.text = ""
+        ResultMEMTXT.text = ""
+        resultTXT.text = ""
+        ReturnADDTXT.text = ""
+        InstructionTXT.text = ""
+        Program_counterTXT.text = ""
+        data1TXT.text = ""
+        data2TXT.text = ""
+        data1MemTXT.text = ""
+        InsAddressTXT.text = ""
+        data2MemTXT.text = ""
+        
+        resetLBL.text = "Reset Finished"
+        resetLBL.textColor = .green
+        playBtn.isHidden = false
     }
     
     /*
