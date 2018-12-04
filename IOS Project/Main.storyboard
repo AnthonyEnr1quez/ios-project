@@ -1433,7 +1433,7 @@ It returns the result to the memory of the destination address.
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="DAn-is-NeD" kind="show" id="wR4-OF-z2M"/>
+                                    <segue destination="DAn-is-NeD" kind="show" identifier="snap_problem" id="wR4-OF-z2M"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1789,7 +1789,7 @@ It returns the result to the memory of the destination address.
                     </view>
                     <tabBarItem key="tabBarItem" title="Solution" image="first" selectedImage="first" id="zGB-qo-7Yi"/>
                     <connections>
-                        <outlet property="SolutionImageView" destination="tIS-jF-10H" id="nsa-lb-aYs"/>
+                        <outlet property="solutionImageView" destination="tIS-jF-10H" id="nsa-lb-aYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aV0-3I-wcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1819,7 +1819,7 @@ It returns the result to the memory of the destination address.
                     </view>
                     <tabBarItem key="tabBarItem" title="Hint" image="second" selectedImage="second" id="xje-rr-RA2"/>
                     <connections>
-                        <outlet property="HintImageView" destination="Tz5-NT-6JI" id="TFz-iI-H9J"/>
+                        <outlet property="hintImageView" destination="Tz5-NT-6JI" id="TFz-iI-H9J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4H-1E-lUw" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,13 +12,13 @@ class ProblemViewController: UIViewController {
     
     @IBOutlet weak var algorithmTV: UITextView!
     @IBOutlet weak var stepsTV: UITextView!
-    let problem = SnapModel.snap.selectedProblem
+    var problem:Problem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
+        problem = SnapModel.snap.selectedProblem
         navigationItem.title = problem.name
         algorithmTV.text = problem.algorithm
         stepsTV.text = problem.steps
