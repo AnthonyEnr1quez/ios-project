@@ -37,7 +37,7 @@ struct Problem {
     var solution:String
 }
 
-// Assignng steps with string values
+// Assigning steps with string values
 let steps1 = "move forward 100 \nturn right 90 \nrepeat 4 times"
 let steps2 = "Ask the user for n \nDraw a square \nMove to a random location \nRepeat steps 2-3 n times"
 let steps3 = "so that squares on the left side of the screen appear red \nsquares on the right side of the screen appear green"
