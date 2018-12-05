@@ -8,6 +8,8 @@
 
 import UIKit
 
+//Fetch Execute class
+
 class FetchExecuteViewController: UIViewController{
     
     // control unit
@@ -52,10 +54,10 @@ class FetchExecuteViewController: UIViewController{
         
         resetLBL.isHidden = true
     }
-    
+    // Play button where all the functions run by clicking this
     @IBAction func playButton(_ sender: Any) {
         resetLBL.isHidden = true
-        resetLBL.text = "Will reset in 20 sec"
+        resetLBL.text = "Will reset in 10 sec"
         playBtn.isHidden = true
         
         instructionAddressTXT.text = "\(800)"
@@ -78,15 +80,15 @@ class FetchExecuteViewController: UIViewController{
         DispatchQueue.main.asyncAfter(deadline: .now() + 40.0) { self.rresult() }
         
         // reset uiview
-        DispatchQueue.main.asyncAfter(deadline: .now() + 60.0) { self.reset() }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 50.0) { self.reset() }
     }
-    
+    //Fetching of values
     private func fetch() {
         iFetchTXT.backgroundColor = UIColor.orange
         programCounterTXT.text = "\(800)"
         instructionTXT.text = "ADD 4000, 2000, 2080"
     }
-    
+    // Decoding finds the address of the operands
     private func decode() {
         decodeTXT.backgroundColor = UIColor.orange
         iFetchTXT.backgroundColor = UIColor.white
@@ -95,7 +97,7 @@ class FetchExecuteViewController: UIViewController{
         dataAddress1TXT.text = "2000"
         dataAddress2TXT.text = "2080"
     }
-    
+    // Data Fetch values are retrieved from the memory
     private func dataFetch() {
         dFetchTXT.backgroundColor = UIColor.orange
         decodeTXT.backgroundColor = UIColor.white
@@ -107,19 +109,21 @@ class FetchExecuteViewController: UIViewController{
         dataMem1TXT.text = "\(30)"
         dataMem2TXT.text = "\(12)"
     }
-    
+    // Execution of the operation
     private func iExecution() {
         executeTXT.backgroundColor = UIColor.orange
         dFetchTXT.backgroundColor = UIColor.white
+       
         instructionTXT.isHidden = true
         resultTXT.text = "\(42)"
         dataAddress1TXT.isHidden = true
         dataAddress2TXT.isHidden = true
     }
-    
+    // Result is printed out
     private func rresult() {
         rReturnTXT.backgroundColor = UIColor.orange
         executeTXT.backgroundColor = UIColor.white
+        
         data1TXT.isHidden = true
         data2TXT.isHidden = true
         instructionAddressTXT.text = "\(800)"
@@ -127,7 +131,7 @@ class FetchExecuteViewController: UIViewController{
         resetLBL.textColor = .orange
         resetLBL.isHidden = false
     }
-    
+    // Reset all the fields
     private func reset() {
         rReturnTXT.backgroundColor = .white
         instructionAddressTXT.isHidden = false
