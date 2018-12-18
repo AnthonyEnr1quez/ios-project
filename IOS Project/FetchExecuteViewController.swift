@@ -8,183 +8,161 @@
 
 import UIKit
 
+//Fetch Execute class
 
 class FetchExecuteViewController: UIViewController{
     
+    // control unit
+    @IBOutlet weak var instructionTXT: UITextField!
+    @IBOutlet weak var iFetchTXT: UITextField!
+    @IBOutlet weak var decodeTXT: UITextField!
+    @IBOutlet weak var dFetchTXT: UITextField!
+    @IBOutlet weak var executeTXT: UITextField!
+    @IBOutlet weak var programCounterTXT: UITextField!
+    @IBOutlet weak var rReturnTXT: UITextField!
     
-    
+    // ALU
+    @IBOutlet weak var data1TXT: UITextField!
+    @IBOutlet weak var data2TXT: UITextField!
+    @IBOutlet weak var resultTXT: UITextField!
+    @IBOutlet weak var returnAddressTXT: UITextField!
 
+    // memory
+    @IBOutlet weak var instructionAddressTXT: UITextField!
+    @IBOutlet weak var dataAddress1TXT: UITextField!
+    @IBOutlet weak var dataAddress2TXT: UITextField!
+    
+    // memory address
+    @IBOutlet weak var addMemTXT: UITextField!
+    @IBOutlet weak var dataAdd1TXT: UITextField!
+    @IBOutlet weak var dataAdd2TXT: UITextField!
+    @IBOutlet weak var resultAddTXT: UITextField!
+
+    // memory contents
+    @IBOutlet weak var contentMemTXT: UITextField!
+    @IBOutlet weak var dataMem1TXT: UITextField!
+    @IBOutlet weak var dataMem2TXT: UITextField!
+    @IBOutlet weak var resultMemTXT: UITextField!
+    
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var resetLBL: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-    }
-    
-    @IBOutlet weak var InstructionTXT: UITextField!
-    
-    @IBOutlet weak var FetchTXT: UITextField!
-    @IBOutlet weak var decodeTXT: UITextField!
-    
-    @IBOutlet weak var DFetchTXT: UITextField!
-    
-    @IBOutlet weak var ExecuteTXT: UITextField!
-    
-    
-    @IBOutlet weak var rreturn: UITextField!
-    
-    
-    @IBOutlet weak var InsAddressTXT: UITextField!
-    
-    
-    @IBOutlet weak var data1MemTXT: UITextField!
-    
-    
-    @IBOutlet weak var data2MemTXT: UITextField!
-    
-    
-    @IBOutlet weak var addMemTXT: UITextField!
-    
-    
-    @IBOutlet weak var ContentMemTXT: UITextField!
-    
-    
-    @IBOutlet weak var Program_counterTXT: UITextField!
-    
-    
-    @IBOutlet weak var ReturnADDTXT: UITextField!
-    
-    @IBOutlet weak var resultTXT: UITextField!
-    
-    
-    @IBOutlet weak var data2TXT: UITextField!
-    
-    @IBOutlet weak var data1TXT: UITextField!
-    
-    
-    @IBOutlet weak var DataAdd1TXT: UITextField!
-    
-    
-    
-    @IBOutlet weak var DataAdd2TXT: UITextField!
-    
-    @IBOutlet weak var ResultAddTXT: UITextField!
-    
-    @IBOutlet weak var DataMEM1TXT: UITextField!
-    
-    @IBOutlet weak var DataMEM2TXT: UITextField!
-    
-    
-    @IBOutlet weak var ResultMEMTXT: UITextField!
-    
-    @IBAction func PlayButton(_ sender: Any) {
         
-        InsAddressTXT.text = "\(800)"
+        resetLBL.isHidden = true
+    }
+    // Play button where all the functions run by clicking this
+    @IBAction func playButton(_ sender: Any) {
+        resetLBL.isHidden = true
+        resetLBL.text = "Will reset in 10 sec"
+        playBtn.isHidden = true
+        
+        instructionAddressTXT.text = "\(800)"
         addMemTXT.text = "\(800)"
-        ContentMemTXT.text = "ADD 4000, 2000, 2080"
-        UIView.animate(withDuration: 1.0, delay: 3.5, options: [], animations: {self.fetch()}, completion: nil)
-   UIView.animate(withDuration: 1.0, delay: 10, options: [], animations: {self.decode()}, completion: nil)
-     UIView.animate(withDuration: 1.0, delay: 15.5, options: [], animations: {self.dataFetch()}, completion: nil)
-        UIView.animate(withDuration: 1.0, delay: 17.5, options: [], animations: {self.iExecution()}, completion: nil)
- UIView.animate(withDuration: 1.0, delay: 20.5, options: [], animations: {self.rresult()}, completion: nil)
-//        fetch()
-//
-//        decode()
-//        dataFetch()
-//        iExecution()
-//        rresult()
-        //self.run();
-    }
-    
-//    func run(){
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 20)
-//        {
-//            self.fetch()
-//        }
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 20)
-//        {
-//            self.decode()
-//        }
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 20)
-//        {
-//            self.dataFetch()
-//        }
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 20)
-//        {
-//            self.iExecution()
-//        }
-//
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 20)
-//        {
-//            self.rresult()
-//        }
-//
-//    }
-    
-   
-    
-    func fetch(){
-       
-        FetchTXT.backgroundColor = UIColor.orange
+        contentMemTXT.text = "ADD 4000, 2000, 2080"
         
-        Program_counterTXT.text = "\(800)"
+        // fetch
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { self.fetch() }
         
-        InstructionTXT.text = "ADD 4000, 2000, 2080"
+        // decode
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) { self.decode() }
+        
+        // dataFetch
+        DispatchQueue.main.asyncAfter(deadline: .now() + 20.0) { self.dataFetch() }
+        
+        // iExecution
+        DispatchQueue.main.asyncAfter(deadline: .now() + 30.0) { self.iExecution() }
+        
+        // rresult
+        DispatchQueue.main.asyncAfter(deadline: .now() + 40.0) { self.rresult() }
+        
+        // reset uiview
+        DispatchQueue.main.asyncAfter(deadline: .now() + 50.0) { self.reset() }
     }
-    func decode(){
+    //Fetching of values
+    private func fetch() {
+        iFetchTXT.backgroundColor = UIColor.orange
+        programCounterTXT.text = "\(800)"
+        instructionTXT.text = "ADD 4000, 2000, 2080"
+    }
+    // Decoding finds the address of the operands
+    private func decode() {
         decodeTXT.backgroundColor = UIColor.orange
-        FetchTXT.backgroundColor = UIColor.white
-        InsAddressTXT.isHidden = true
-        ReturnADDTXT.text = "4000"
-        data1MemTXT.text = "2000"
-        data2MemTXT.text = "2080"
-        
-        
+        iFetchTXT.backgroundColor = UIColor.white
+        instructionAddressTXT.isHidden = true
+        returnAddressTXT.text = "4000"
+        dataAddress1TXT.text = "2000"
+        dataAddress2TXT.text = "2080"
     }
-    func dataFetch(){
-        DFetchTXT.backgroundColor = UIColor.orange
+    // Data Fetch values are retrieved from the memory
+    private func dataFetch() {
+        dFetchTXT.backgroundColor = UIColor.orange
         decodeTXT.backgroundColor = UIColor.white
-        FetchTXT.backgroundColor = UIColor.white
-        InsAddressTXT.isHidden = true
         data1TXT.text = "\(30)"
         data2TXT.text = "\(12)"
-        DataAdd1TXT.text = "\(2000)"
-        DataAdd2TXT.text = "\(2080)"
-        ResultAddTXT.text = "\(4000)"
-        DataMEM1TXT.text = "\(30)"
-        DataMEM2TXT.text = "\(12)"
-        
-        
+        dataAdd1TXT.text = "\(2000)"
+        dataAdd2TXT.text = "\(2080)"
+        resultAddTXT.text = "\(4000)"
+        dataMem1TXT.text = "\(30)"
+        dataMem2TXT.text = "\(12)"
     }
-    func iExecution()
-    {
-        ExecuteTXT.backgroundColor = UIColor.orange
-        DFetchTXT.backgroundColor = UIColor.white
-        decodeTXT.backgroundColor = UIColor.white
-        FetchTXT.backgroundColor = UIColor.white
-        InstructionTXT.isHidden = true
-        InsAddressTXT.isHidden = true
+    // Execution of the operation
+    private func iExecution() {
+        executeTXT.backgroundColor = UIColor.orange
+        dFetchTXT.backgroundColor = UIColor.white
+       
+        instructionTXT.isHidden = true
         resultTXT.text = "\(42)"
-        data1MemTXT.isHidden = true
-        data2MemTXT.isHidden = true
+        dataAddress1TXT.isHidden = true
+        dataAddress2TXT.isHidden = true
     }
-    func rresult(){
-        rreturn.backgroundColor = UIColor.orange
-        ExecuteTXT.backgroundColor = UIColor.white
-        DFetchTXT.backgroundColor = UIColor.white
-        decodeTXT.backgroundColor = UIColor.white
-        FetchTXT.backgroundColor = UIColor.white
-        InstructionTXT.isHidden = true
-      
+    // Result is printed out
+    private func rresult() {
+        rReturnTXT.backgroundColor = UIColor.orange
+        executeTXT.backgroundColor = UIColor.white
+        
         data1TXT.isHidden = true
         data2TXT.isHidden = true
-        InsAddressTXT.text = "\(800)"
-        ResultMEMTXT.text = "\(42)"
-        
+        instructionAddressTXT.text = "\(800)"
+        resultMemTXT.text = "\(42)"
+        resetLBL.textColor = .orange
+        resetLBL.isHidden = false
     }
+    // Reset all the fields
+    private func reset() {
+        rReturnTXT.backgroundColor = .white
+        instructionAddressTXT.isHidden = false
+        instructionTXT.isHidden = false
+        dataAddress1TXT.isHidden = false
+        dataAddress2TXT.isHidden = false
+        data1TXT.isHidden   = false
+        data2TXT.isHidden = false
+        programCounterTXT.text = ""
+        addMemTXT.text = ""
+        dataAdd1TXT.text = ""
+        dataAdd2TXT.text = ""
+        resultAddTXT.text = ""
+        contentMemTXT.text = ""
+        dataMem1TXT.text = ""
+        dataMem2TXT.text = ""
+        resultMemTXT.text = ""
+        resultTXT.text = ""
+        returnAddressTXT.text = ""
+        instructionTXT.text = ""
+        programCounterTXT.text = ""
+        data1TXT.text = ""
+        data2TXT.text = ""
+        dataAddress1TXT.text = ""
+        instructionAddressTXT.text = ""
+        dataAddress2TXT.text = ""
+        resetLBL.text = "Reset Finished"
+        resetLBL.textColor = .green
+        playBtn.isHidden = false
+    }
+    
     /*
     // MARK: - Navigation
 
